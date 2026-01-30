@@ -38,7 +38,7 @@ const adapter = process.env.CF_PAGES ? cloudflarePages() : vercel({ mode: "serve
 
 export default defineConfig({
     site: siteConfig.siteURL,
-    base: "my-repo",
+    base: "/",
     trailingSlash: "always",
     adapter: adapter,
     integrations: [
