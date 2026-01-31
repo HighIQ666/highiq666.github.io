@@ -2,7 +2,10 @@
 
 ## How to Apply
 
-Please send your website information to: xxx@xxx.com
+Please send your website information to one of the accounts below:
+- Email: c3197595648@163.com
+- QQ: 3197595648
+- Other ways to reach me.
 
 Email Subject:
 ```

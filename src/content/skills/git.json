@@ -3,10 +3,10 @@
     "description": "A distributed version control system.",
     "icon": "logos:git-icon",
     "category": "tools",
-    "level": "advanced",
+    "level": "beginner",
     "experience": {
-        "years": 3,
-        "months": 0
+        "years": 0,
+        "months": 6
     },
     "color": "#F05032"
 }

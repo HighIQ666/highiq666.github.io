@@ -1,11 +1,11 @@
 # 站点配置
 site:
     # 站点 URL（以斜杠结尾）
-    siteURL: "https://twilight.spr-aachen.com/"
+    siteURL: "https://highiq666.github.io/"
     # 站点标题
-    title: "Twilight"
+    title: "HighIQ666's Blog"
     # 站点副标题
-    subtitle: "Blog Template"
+    subtitle: "Blog of HighIQ666"
     # 语言配置
     lang: "en"
     # 翻译配置
@@ -33,18 +33,18 @@ site:
     timeZone: 8
     # 字体配置
     font:
-        # 示例字体配置 - Zen Maru Gothic
-        "Example - ZenMaruGothic":
+        #字体配置 - HanYi Wenhei
+        "HanYi Wenhei":
             # 字体源 (字体 CSS 链接 | 字体文件路径)
-            src: "https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap"
+            src: "HanYiWenhei-85W.ttf"
             # 字体名 (font-family)
-            family: "Zen Maru Gothic"
+            family: "HanYi Wenhei"
     # 主题色配置
     themeColor:
         # 主题色的默认色相 (范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345)
-        hue: 255
+        hue: 360
     # 默认主题 ("system" 跟随系统 | "light" 浅色 | "dark" 深色)
-    defaultTheme: "dark"
+    defaultTheme: "system"
     # 壁纸配置
     wallpaper:
         # 模式 ("banner" 横幅 | "fullscreen" 全屏 | "none" 纯色)
@@ -53,9 +53,10 @@ site:
         src:
             # 桌面壁纸图片 (相对于 /public 目录; 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播)
             desktop:
-                - "/assets/images/desktopWallpaper_1.jpg"
-                - "/assets/images/desktopWallpaper_2.jpg"
-                - "/assets/images/desktopWallpaper_3.jpg"
+                - "/assets/images/desktopWallpaper_1.png"
+                - "/assets/images/desktopWallpaper_2.png"
+                - "/assets/images/desktopWallpaper_3.png"
+                - "/assets/images/desktopWallpaper_4.png"
             # 移动壁纸图片 (相对于 /public 目录; 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播)
             mobile:
                 - "/assets/images/mobileWallpaper_1.jpg"
@@ -77,10 +78,12 @@ site:
                 # 在主页显示文本
                 enable: true
                 # 主标题
-                title: "Twilight"
+                title: "Nachoneko"
                 # 副标题，支持单个字符串或字符串数组
                 subtitle:
                     - "Illuminate Our Paths"
+                    - "Otakus Save the World"
+                    - "Anon Tokyo"
                 # 副标题打字机效果
                 typewriter:
                     # 启用副标题打字机效果
@@ -143,7 +146,7 @@ site:
     # bangumi 配置
     bangumi:
         # 用户 ID
-        userId: "your-bangumi-id"
+        userId: "HighIQ666"
     # OpenGraph 配置
     generateOgImages: false
 
@@ -174,19 +177,19 @@ navbar:
             # 导航图标
             icon: "material-symbols:person"
             # 导航描述
-            description: "A collection of my creative works and experiences"
+            description: "A collection of something else."
             # 子链接
             children:
                 - # 二级导航链接 - 项目 (预设)
                     "Projects"
                 - # 二级导航链接 - 技能 (预设)
                     "Skills"
-                - # 二级导航链接 - 历程 (预设)
-                    "Timeline"
-                - # 二级导航链接 - 日记 (预设)
-                    "Diary"
-                - # 二级导航链接 - 相册 (预设)
-                    "Albums"
+                # - # 二级导航链接 - 历程 (预设)
+                #     "Timeline"
+                # - # 二级导航链接 - 日记 (预设)
+                #     "Diary"
+                # - # 二级导航链接 - 相册 (预设)
+                #     "Albums"
                 - # 二级导航链接 - 动画 (预设)
                     "Anime"
         - # 一级导航链接 - 好友 (预设)
@@ -250,9 +253,9 @@ profile:
     # 头像配置 (相对于 /public 目录)
     avatar: "/assets/images/avatar.jpg"
     # 信息配置
-    name: "Twilight"
+    name: "HighIQ666"
     # 简介配置
-    bio: "Hi"
+    bio: "Nachoneko fan"
     # 链接配置
     links:
         - # 链接示例
@@ -261,7 +264,7 @@ profile:
             # 图标
             icon: "fa6-brands:github"
             # 链接
-            url: "https://github.com/Spr-Aachen/Twilight"
+            url: "https://github.com/HighIQ666"
 
 # 公告配置
 announcement:
@@ -270,7 +273,7 @@ announcement:
     # 公告内容
     content: "Welcome to my blog!"
     # 允许用户关闭公告
-    closable: true
+    closable: false
     # 链接配置
     link:
         # 启用链接
@@ -285,9 +288,9 @@ announcement:
 # 文章配置
 post:
     # 显示“上次编辑”卡片
-    showLastModified: true
+    showLastModified: false
     # 在文章内容中显示封面
-    showCoverInContent: false
+    showCoverInContent: true
     # 代码高亮配置
     expressiveCode:
         # 主题
@@ -295,7 +298,7 @@ post:
     # 许可证配置
     license:
         # 启用许可证
-        enable: true
+        enable: false
         # 许可证名称
         name: "CC BY-NC-SA 4.0"
         # 许可证链接
@@ -323,7 +326,7 @@ particle:
     # 启用粒子特效
     enable: true
     # 粒子数量
-    particleNum: 12
+    particleNum: 16
     # 粒子越界限制次数，-1为无限循环
     limitTimes: -1
     # 粒子尺寸配置
@@ -374,7 +377,7 @@ musicPlayer:
         # 类型 ("playlist" 歌单 | "song" 单曲)
         type: "playlist"
         # 资源 ID
-        id: "2161912966"
+        id: "2526249371"
     # local 模式专属配置
     local:
         # 播放列表
@@ -383,22 +386,22 @@ musicPlayer:
                 # 序号
                 id: 1
                 # 标题
-                title: "深海之息"
+                title: ""
                 # 作者
-                artist: "Youzee Music"
+                artist: ""
                 # 封面
-                cover: "https://p1.music.126.net/PhKOqFtljgHDDpKYM2ADUA==/109951169858309716.jpg"
+                cover: ""
                 # 路径
-                url: "assets/music/深海之息.m4a"
+                url: ""
                 # 时长
-                duration: 146
+                duration: 0
     # 是否自动播放
-    autoplay: true
+    autoplay: false
 
 # 看板娘配置
 pio:
     # 启用看板娘
-    enable: false
+    enable: true
     # 模型文件路径
     models:
         - "/pio/models/pio/model.json"

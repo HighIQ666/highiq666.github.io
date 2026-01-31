@@ -1,0 +1,20 @@
+{
+    "title": "HITMC Wiki",
+    "description": "A wiki web of HITMC.",
+    "image": "",
+    "category": "website",
+    "techStack": [
+        "HITMC",
+        "Wiki"
+    ],
+    "status": "in-progress",
+    "liveDemo": "https://wiki.hitmc.cc/",
+    "sourceCode": "https://github.com/hit-mc/wiki.hitmc.cc",
+    "startDate": "2024-09-23",
+    "endDate": "",
+    "featured": true,
+    "tags": [
+        "Personal Project",
+        "Open Source Project"
+    ]
+}
