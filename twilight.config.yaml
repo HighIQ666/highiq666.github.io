@@ -36,7 +36,7 @@ site:
         #字体配置 - HanYi Wenhei
         "HanYi Wenhei":
             # 字体源 (字体 CSS 链接 | 字体文件路径)
-            src: "HanYiWenhei-85W.ttf"
+            src: "/HanYiWenhei-85W.ttf"
             # 字体名 (font-family)
             family: "HanYi Wenhei"
     # 主题色配置
