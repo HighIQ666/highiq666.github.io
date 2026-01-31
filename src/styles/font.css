@@ -1,0 +1,7 @@
+/* 在 CSS 文件中 */
+@font-face {
+  font-family: 'HanYi Wenhei';
+  src: url('/fonts/HanYiWenhei-85W.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
