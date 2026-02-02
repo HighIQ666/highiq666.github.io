@@ -93,7 +93,7 @@ ko n na bo ku de mo ko ko nii ru sa ke bu yo
 
 ma yo i bo shi no u ta
 
---Music--
+---
 
 問（と）われることは何故（なぜ）か
 
@@ -175,7 +175,7 @@ yo ro me ki na ga ra de mo mo gai te i run da yo
 
 ma yo i bo shi no u ta
 
---Music--
+---
 
 僕（ぼく）のため それだけ
 

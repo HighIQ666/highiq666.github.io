@@ -27,7 +27,7 @@ sa i syo no hi to shi zu ku ni kao a ge ta kyou no bo ku wo
 
 透明（とうめい）な傘（かさ）で作（つく）る ひとり分（ぶん）だけの世界（せかい）
 
-tou mei na ka sa de tsu ku ru | hi to ri bun da ke no se ka i
+tou mei na ka sa de tsu ku ru `|` hi to ri bun da ke no se ka i
 
 (遮（さえぎ）って隠（かく）れた)
 
@@ -43,7 +43,7 @@ bi nii ru ko shi no so ra ka ra
 
 こぼれ落（お）ちる音（おと）響（ひび）いて
 
-ko bo re o chi ru | o to hi bi i te
+ko bo re o chi ru `|` o to hi bi i te
 
 (弾（はじ）けた合図（あいず）)
 
@@ -63,7 +63,7 @@ a su fa ru to so me te i ku a fu re da shi ta su ko o ru
 
 通（とお）り過（す）ぎる時（とき）を 待（ま）つだけじゃなくて
 
-too ri su (gi ru) `ki` to ki wo | ma tsu da ke jya na ku te
+too ri su (gi ru) `ki` to ki wo `|` ma tsu da ke jya na ku te
 
 僕（ぼく）は見（み）つめていたいんだよ
 
@@ -97,6 +97,8 @@ su gi sa tte shi ma u syu n kan wo
 
 bo ku wa a tsu me ta i yo aa hi to shi zu ku wo
 
+---
+
 とめどなく傘（かさ）にすべり落（お）ちる
 
 to me do na ku ka sa ni su be ri o chi ru
@@ -127,7 +129,7 @@ a i ma i ni to ke ru i ro  na ga me te i ta i
 
 漂（ただよ）う雲（くも）だって 一秒（いちびょう）先（さき）なんて
 
-ta da you ku mo da tte  i chi byou sa ki nan te
+ta da you ku mo da tte i chi byou sa ki nan te
 
 わからないままいくんだろう
 
@@ -135,7 +137,7 @@ wa ka ra na i ma ma i kun da rou
 
 不安（ふあん）で鈍（にぶ）く霞（かす）んでく 明日（あした）も
 
-fu an de ni bu ku ka su n de ku | a shi ta mo
+fu an de ni bu ku ka su n de ku `|` a shi ta mo
 
 もしこの雨（あめ）が上（あ）がっても
 

@@ -77,6 +77,8 @@ nee o ne gai do u ka ko no ma ma
 
 ha na sa na i dei te
 
+---
+
 縁（えん）を結（むす）んではほどきほどかれ誰（だれ）しもが
 
 en wo mu su n de wa ho do ki ho do ka re da re shi mo ga
@@ -108,6 +110,8 @@ a no hi na ke na ka tta bo ku wo
 光（ひかり）はやさしく抱（だ）きしめた
 
 hi ka ri wa ya sa shi ku da ki shi me ta
+
+---
 
 照（て）らされた世界（せかい）
 

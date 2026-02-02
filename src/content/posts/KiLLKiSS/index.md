@@ -15,13 +15,11 @@ draft: false
 
 弄られて垂れ流す 音のない音 遍く
 
-ma sa gu ra re te ta re na ga su | o to no na i o toa ma ne ku
+ma sa gu ra re te ta re na ga su `|` o to no na i o toa ma ne ku
 
 名前を捨てたのね あなたのモザイクが泣いてる
 
-na ma e wo su te ta | no ne a na ta no mo za i ku | ga na i te ru
-
-can not，can not，not, not，not deny
+na ma e wo su te ta `|` no ne a na ta no mo za i ku `|` ga na i te ru
 
 can not，can not，not, not，not deny
 
@@ -47,11 +45,9 @@ shou cho u te ki na pa ree (do)
 
 この月夜に仰げよ仰げ
 
-ko no tsu ki yo ni | a o ge yo a o ge
+ko no tsu ki yo ni `|` a o ge yo a o ge
 
 「completeness」
-
-completeness
 
 嗚呼  命の灯を掲げ
 
@@ -59,13 +55,9 @@ aa i no chi no hi wo ka ka ge
 
 KiLLKiSS judy，KiLLKiSS jude，KiLLKiSS juda
 
-KiLLKiSS judy，KiLLKiSS jude，KiLLKiSS juda
-
 欺いて
 
 a za mui te
-
-KiLLKiSS judy，KiLLKiSS jude，KiLLKiSS juda
 
 KiLLKiSS judy，KiLLKiSS jude，KiLLKiSS juda
 
@@ -85,7 +77,7 @@ u tsu ku shi i ta wa mu re ni hi to wa ko wa re te yu ku
 
 o ka shii wa ne
 
-‘cuz we’re all alone
+---
 
 ‘cuz we’re all alone
 
@@ -99,8 +91,6 @@ te wo a ge ko ne ga e
 
 Oh，when you bleed
 
-Oh，when you bleed
-
 惑星に そう その影を伸ばせ
 
 wa ku sei ni sou so no ka ge wo no ba se
@@ -111,25 +101,17 @@ nee wa ta shi no ho shi ga shi ri ta ga tte i ru wa sa a
 
 you bleed，yes，bleed
 
-you bleed，yes，bleed
-
 その血で 天の五線譜を書き換えれば
 
 so no chi de so ra no go se n fu wo ka ki ka e re ba
 
 code ‘KiLLKiSS’ uh...
 
-code ‘KiLLKiSS’ uh...
-
-KiLLKiSS judy，KiLLKiSS jude，KiLLKiSS juda
-
 KiLLKiSS judy，KiLLKiSS jude，KiLLKiSS juda
 
 欺いて
 
 a za mu i te
-
-KiLLKiSS judy，KiLLKiSS jude，KiLLKiSS juda
 
 KiLLKiSS judy，KiLLKiSS jude，KiLLKiSS juda
 

@@ -27,7 +27,7 @@ shi n ji ta mi chi (running)
 
 迷わず進もう　黒でもいい(all right)
 
-ma yo wa zu su su mo | ku ro de mo i (all right)
+ma yo wa zu su su mo `|` ku ro de mo ii (all right)
 
 白じゃなくても(ok)
 
@@ -39,19 +39,21 @@ fu jo ri wo ko wa shi
 
 私は此処に今　生きているから(shout！)
 
-wa ta shi wa ko ko ni | i ma i ki te i ru ka ra(shout!)
+wa ta shi wa ko ko ni `|` i ma i ki te i ru ka ra(shout!)
+
+---
 
 (black shout)
 
-(black)不安に溢れた
+(black) 不安に溢れた
 
 (black) fu a n ni a fu re ta
 
-(shout)世の中のイロハ
+(shout) 世の中のイロハ
 
 (shout) yo no na ka no i ro ha
 
-(black)苛立ちと共に
+(black) 苛立ちと共に
 
 (black) i ra da chi to to mo ni
 
@@ -59,15 +61,15 @@ wa ta shi wa ko ko ni | i ma i ki te i ru ka ra(shout!)
 
 ji yu wo u ba tte ku
 
-(black)モノクロの雨が
+(black) モノクロの雨が
 
 (black) mo no ku ro no a me ga
 
-(shout)世界を隠して
+(shout) 世界を隠して
 
 (shout) se ka i wo ka ku shi te
 
-(black)空は嘲笑い沈んだ
+(black) 空は嘲笑い沈んだ
 
 (black) so ra wa a za wa ra i shi zu n da
 
@@ -117,17 +119,19 @@ ka ku go de fu mi da shi
 
 叶えたい夢　勝ち取れ今すぐに！(shout！)
 
-ka na e ta i yu me | ka chi to re i ma su gu ni!(shout!)
+ka na e ta i yu me `|` ka chi to re i ma su gu ni!(shout!)
 
-(black)ありきたりなんて
+---
+
+(black) ありきたりなんて
 
 (black) a ri ki ta ri na n te
 
-(shout)嫌なの全てが
+(shout) 嫌なの全てが
 
 (shout) i ya na no su be te ga
 
-(black)いつもと同じに？
+(black) いつもと同じに？
 
 (black) i tsu mo to o na ji ni?
 
@@ -135,15 +139,15 @@ ka na e ta i yu me | ka chi to re i ma su gu ni!(shout!)
 
 so n na no a ri e nai
 
-(black)声を高らかに
+(black) 声を高らかに
 
 (black) ko e wo ta ka ra ka ni
 
-(shout)本音に答える
+(shout) 本音に答える
 
 (shout) ho n ne ni ko ta e ru
 
-(black)嘆くよりずっと大事で
+(black) 嘆くよりずっと大事で
 
 (black) na ge ku yo ri zu tto da i ji de
 
@@ -193,7 +197,9 @@ ka ga ya i te su ga ta
 
 掴め未来を　決意の手のひらで(shout!)
 
-tsu ka me mi ra i wo | ke tsu i no te no hi ra de (shout!)
+tsu ka me mi ra i wo `|` ke tsu i no te no hi ra de (shout!)
+
+---
 
 揺らぐ視線(残像)
 
@@ -210,6 +216,8 @@ ka ta ku mu su bi (gyutto)
 勇気で繋ぐから
 
 yu u ki de tsu na gu ka ra
+
+~~
 
 例え明日が(missing)
 
