@@ -148,10 +148,10 @@ $$
 （1）$\frac{S_n}{T_n}=\frac{a_1+a_n}{b_1+b_n}$；
 （2）$\frac{a_n}{b_n}=\frac{2a_n}{2b_n}=\frac{a_1+a_{2n-1}}{b_1+b_{2n-1}}=\frac{S_{2n-1}}{T_{2n-1}}$
 
-8. 已知$\frac{S_n}{T_n}=\frac{an+b}{cn+d}$ 则$\frac{a_m}{b_n}=\frac{S_{2m-1}}{T_{2n-1}}$
+8. 已知$\frac{S_n}{T_n}=\frac{an+b}{cn+d}$ 则$\frac{a_m(2m-1)}{b_n(2n-1)}=\frac{S_{2m-1}}{T_{2n-1}}$
 
-证：设$S'_n=kn(an+b)$ $T'_n=kn(cn+d)$
-$\frac{a_m}{b_n}=\frac{2a_m}{2b_n}=\frac{a_1+a_{2m-1}}{b_1+b_{2n-1}}=\frac{(\frac{(2m-1)(a_1+a_{2m-1})}{2})(2n-1)}{(\frac{(2n-1)(b_1+b_{2n-1})}{2})(2m-1)}=\frac{(S'_{2m-1})(2n-1)}{(T'_{2n-1})(2m-1)}=\frac{k(2m-1)[a(2m-1)+b](2n-1)}{k(2n-1)[c(2n-1)+d](2m-1)}=\frac{a(2m-1)+b}{c(2n-1)+d}=\frac{S_{2m-1}}{T_{2n-1}}$
+证：
+$\frac{a_m}{b_n}=\frac{2a_m}{2b_n}=\frac{a_1+a_{2m-1}}{b_1+b_{2n-1}}=\frac{(\frac{(2m-1)(a_1+a_{2m-1})}{2})(2n-1)}{(\frac{(2n-1)(b_1+b_{2n-1})}{2})(2m-1)}=\frac{(S_{2m-1})(2n-1)}{(T_{2n-1})(2m-1)}$
 
 9. 等差数列的奇偶项
 
@@ -276,7 +276,7 @@ $\{c a_n\},\;\{a_n^2\},\;\left\{\frac{1}{a_n}\right\},\;\{a_n^r\}\;(r \in \mathb
 也是等比数列（$c \neq 0$），公比依次为
 $q,\;q^2,\;\frac{1}{q},\;q^r,\;pq$
 
-2. 下标等差项等比：$a_n$ 等比， $a_k,a_{k+m},a_{k+2m},\dots$ 等比，公比 $q'=mq$
+2. 下标等差项等比：$a_n$ 等比， $a_k,a_{k+m},a_{k+2m},\dots$ 等比，公比 $q'=q^m$
 
 3. 片段和等比：若等比数列$\{a_n\}$的前$n$项和为$S_n$，则$S_k,\;S_{2k}-S_k,\;S_{3k}-S_{2k},\;\dots$成等比数列（各项不为0），公比为$q^k$
 
