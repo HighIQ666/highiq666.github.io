@@ -4,7 +4,7 @@ published: 2026-01-31
 description: "Romaji of 春日影."
 cover: "./cover.jpg"
 pinned: false
-tags: [MyGO!!!!!]
+tags: [Crythic]
 category: Romaji
 draft: false
 ---
