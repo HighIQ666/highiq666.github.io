@@ -11,7 +11,7 @@ draft: false
 
 ## 描绘未来
 
-<iframe width="100%" height="468" src="//player.bilibili.com/player.html?isOutside=true&aid=115228570290372&bvid=BV1iFWMzZET8&cid=32777309056&p=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" &autoplay=0> </iframe>
+<iframe width="100%" height="468" src="//player.bilibili.com/player.html?isOutside=true&aid=115228570290372&bvid=BV1iFWMzZET8&cid=32777309056&p=2&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" &autoplay=0> </iframe>
 
 行方不明の本音を探して　迷うからジグザグに降る雨
 
