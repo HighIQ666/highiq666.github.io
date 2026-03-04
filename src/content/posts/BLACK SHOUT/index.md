@@ -35,7 +35,7 @@ shi ro ja na ku te mo (ok)
 
 不条理を壊し
 
-fu jo ri wo ko wa shi
+fu jo u ri wo ko wa shi
 
 私は此処に今　生きているから(shout！)
 
@@ -207,7 +207,7 @@ yu ra gu shi se n (zanzo)
 
 守るように(一層)
 
-ma mo ru yo ni (isso)
+ma mo ru yo u ni (isso)
 
 固く結び(ギュッと)
 
@@ -241,7 +241,7 @@ su ku mu ka ra da (get up)
 
 強く抱いて(stacking)
 
-tsu yo ku i dai te (stacking)
+tsu yo ku i da i te (stacking)
 
 覚悟で踏み出し
 

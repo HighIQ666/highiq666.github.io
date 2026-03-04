@@ -1,7 +1,7 @@
 ---
-title: 春日影
+title: Haruhikage_春日影
 published: 2026-01-31
-description: "Romaji of 春日影."
+description: "Romaji of Haruhikage."
 cover: "./cover.jpg"
 pinned: false
 tags: [Crythic]

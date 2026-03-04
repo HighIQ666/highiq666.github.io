@@ -113,7 +113,7 @@ i ma wa o za na ri de
 
 華（はな）やぎに馴染（なじ）めない
 
-ha na ya gi ni na ji me jya na i
+ha na ya gi ni na ji me na i
 
 この心（こころ）を無視（むし）して
 
@@ -161,7 +161,7 @@ u ma ku ya re na i n da
 
 こんな痛（いた）い日々（ひび）をなんで
 
-kon na i ta i hi bi wo nan te
+kon na i tai hi bi wo nan te
 
 退屈（たいくつ）だって片付（かたづ）ける？
 
@@ -169,7 +169,7 @@ ta i ku tsu da tte ka ta zu ke ru?
 
 よろめきながらでも もがいているんだよ
 
-yo ro me ki na ga ra de mo mo gai te i run da yo
+yo ro me ki na ga ra de mo mo gai tei run da yo
 
 迷（まよ）い星（ぼし）のうた
 
