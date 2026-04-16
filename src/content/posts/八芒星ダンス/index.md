@@ -1,6 +1,6 @@
 ---
 title: 八芒星ダンス
-published: 2026-02-01
+published: 2026-03-19
 description: "Romaji of 八芒星ダンス."
 cover: "./cover.jpg"
 pinned: false
