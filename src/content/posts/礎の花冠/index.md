@@ -43,7 +43,7 @@ tsu mu gi a wa se te yu ku
 
 一音一句と
 
-i chi on i kku to
+i chi o n i kku to
 
 (声を繫いで 夢を渡って)
 
