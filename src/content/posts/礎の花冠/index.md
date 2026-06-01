@@ -19,11 +19,11 @@ ma bu shi i na kon na ni mo
 
 あの日から変わらないまま
 
-a no hi ka ra ~ ka wa ra na i ma ma
+a no hi ka ra `~` ka wa ra na i ma ma
 
 一番ほしい言葉で手を取って
 
-i chi ban ho shii ko to ba de te wo to tte
+i chi ban ho shii ko to ba de `|` te wo to tte
 
 連れ出してくれた
 
@@ -65,7 +65,7 @@ ka ga ya ki no na ka
 
 この先も隣で 貴方と歌わせて
 
-ko no sa ki mo to na ri de a na ta to u ta wa se te
+ko no sa ki mo to na ri de `|` a na ta to u ta wa se te
 
 約束の景色と共に もう一度誓う
 
@@ -73,7 +73,7 @@ ya ku so ku no ke shi ki to to mo ni mou i chi do chi kau
 
 ずっと傍にいると 小指を交わして
 
-zu tto so ba ni i ru to ko yu bi wo ka wa shi te
+zu tto so ba ni i ru to `|` ko yu bi wo ka wa shi te
 
 Ever, Ever after
 
@@ -85,7 +85,7 @@ mu ka e ni ki te ku re ta ne
 
 どんなに暗い夜でも
 
-do n na ni ku ra i yo ru de mo
+do n na ni `|` ku ra i yo ru de mo
 
 不器用でいて
 
@@ -113,7 +113,7 @@ ma ta a shi ta ga ku run da
 
 素晴らしい瞬間で
 
-su ba ra shi i shun kan de
+su ba ra shii shun kan de
 
 Ever, Ever after
 
@@ -141,7 +141,7 @@ to wa no ki ra me ki wo
 
 胸に息づく愛しさを礎に
 
-mu ne ni i ki zu ku i to shi sa wo i shi zu e ni
+mu ne ni i ki zu ku `|` i to shi sa wo i shi zu e ni
 
 何度でも 足を踏み出そう
 
@@ -151,7 +151,7 @@ nan do de mo a shi wo fu mi da so u
 
 この先も隣で 貴方と歌わせて
 
-ko no sa ki mo to na ri de a na ta to u ta wa se te
+ko no sa ki mo to na ri de `|` a na ta to u ta wa se te
 
 約束の景色と共に もう一度誓う
 
@@ -159,7 +159,7 @@ ya ku so ku no ke shi ki to to mo ni mou i chi do chi ka u
 
 ずっと傍にいると 小指を交わして
 
-zu tto so ba ni i ru to ko yu bi wo ka wa shi te
+zu tto so ba ni i ru to `|` ko yu bi wo ka wa shi te
 
 Ever, Ever after
 
