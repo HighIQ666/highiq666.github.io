@@ -15,7 +15,7 @@ draft: false
 
 歪な始まりは生まれた
 
-hi zu na ha ji ma ri wa u ma re ta
+i bi zu na ha ji ma ri wa u ma re ta
 
 世界が崩れゆく中
 
