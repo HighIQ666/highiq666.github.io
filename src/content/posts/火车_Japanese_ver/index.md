@@ -205,9 +205,9 @@ Shimbashi
 
 Shinagawa
 
-新横浜（しんよこはま）
+横浜（よこはま）
 
-Shin-Yokohama
+Yokohama
 
 小田原（おだわら）
 
@@ -241,13 +241,13 @@ Nagoya
 
 Kyōto
 
-新大阪（しんおおさか）
+大阪（おおさか）
 
-Shin-Osaka
+Osaka
 
-新神戸（しんこうべ）
+神戸（こうべ）
 
-Shin-Kōbe
+Kōbe
 
 岡山（おかやま）
 
@@ -261,9 +261,9 @@ Hiroshima
 
 Hakata
 
-鹿児島中央（かごしまちゅうおう）
+鹿児島（かごしま）
 
-Kagoshima-Chūō
+Kagoshima
 
 東京（とうきょう）
 
