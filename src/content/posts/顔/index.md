@@ -4,7 +4,7 @@ published: 2026-03-19
 description: "Romaji of 顔."
 cover: "./cover.jpg"
 pinned: false
-tags: (Ave Mujica)
+tags: [Ave Mujica]
 category: Romaji
 draft: false
 ---
