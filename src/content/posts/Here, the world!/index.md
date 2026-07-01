@@ -4,7 +4,7 @@ published: 2026-02-01
 description: "Romaji of Here, the world!"
 cover: "./cover.jpg"
 pinned: false
-tags: (Sumimi)
+tags: [Sumimi]
 category: Romaji
 draft: false
 ---
