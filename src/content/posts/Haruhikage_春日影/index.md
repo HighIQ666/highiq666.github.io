@@ -13,27 +13,35 @@ draft: false
 
 <iframe width="100%" height="468" src="//player.bilibili.com/player.html?isOutside=true&aid=1003371962&bvid=BV1Kx4y1h7vR&cid=1514711919&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" &autoplay=0> </iframe>
 
-悴（かじか）んだ心（こころ） ふるえる眼差（まなざ）し世界（せかい）で
+悴(かじか)んだ心(こころ) ふるえる眼差(まなざ)し世界(せかい)で
 
 ka ji kan da ko ko ro fu ru e ru ma na za shi se ka i de
 
-僕（ぼく）はひとりぼっちだった散（ち）ることしか 知（し）らない春（はる）は
+僕(ぼく)はひとりぼっちだった
 
-bo ku wa hi to ri bo cchi da tta chi ru ko to shi ka shi ra na i ha ru wa
+bo ku wa hi to ri bo cchi da tta
 
-毎年（まいとし）冷（つめ）たくあしらう
+散(ち)ることしか 知(し)らない春(はる)は
+
+chi ru ko to shi ka shi ra na i ha ru wa
+
+毎年(まいとし)冷(つめ)たくあしらう
 
 ma i to shi tsu me ta ku a shi ra u
 
-暗（くら）がりの中（なか） 一方通行（いっぽうつうこうに）ただ ただ
+暗(くら)がりの中(なか) 一方通行(いっぽうつうこうに)ただ ただ
 
 ku ra ga ri no na ka i ppou tsuu kou ni ta da ta da
 
-言葉（ことば）を書（か）き殴（なぐ）って 期待（きたい）するだけ むなしいと分かっていても
+言葉(ことば)を書(か)き殴(なぐ)って
 
-ko to ba wo ka ki na gu tte ki ta i su ru da ke mu na shi i to wa ka tte i te mo
+ko to ba wo ka ki na gu tte
 
-救（すく）いを求（もと）め続（つづ）けた
+期待(きたい)するだけ むなしいと分かっていても
+
+ki ta i su ru da ke mu na shi i to wa ka tte i te mo
+
+救(すく)いを求(もと)め続(つづ)けた
 
 su ku i wo mo to me tsu zu ke ta
 
@@ -41,7 +49,7 @@ su ku i wo mo to me tsu zu ke ta
 
 se tsu na ku te i too shii
 
-今（いま）ならば分（わ）かる気（き）がする
+今(いま)ならば分(わ)かる気(き)がする
 
 i ma na ra ba wa ka ru ki ga su ru
 
@@ -49,45 +57,53 @@ i ma na ra ba wa ka ru ki ga su ru
 
 shi a wa se de ku ruu shi
 
-あの日（ひ）泣（な）けなかった僕（ぼく）を
+あの日(ひ)泣(な)けなかった僕(ぼく)を
 
 a no hi na ke na ka tta bo ku wo
 
-光（ひかり）は やさしく連（つ）れ立（だ）つよ
+光(ひかり)は やさしく連(つ)れ立(だ)つよ
 
 hi ka ri wa ya sa shi ku tsu re da tsu yo
 
-雲間（くもま）をぬって きらり きらり 心満（こころみ）たしては溢（あふ）れ
+雲間(くもま)をぬって きらり きらり 心満(こころみ)たしては溢(あふ)れ
 
 ku mo ma wo nu tte ki ra ri ki ra ri ko ko ro mi ta shi te wa a fu re
 
-いつしか頬（ほお）を きらり きらり 熱（あつ）く 熱く 濡（ぬ）らしてゆく
+いつしか頬(ほお)を きらり きらり
 
-i tsu shi ka hoo wo ki ra ri ki ra ri a tsu ku a tsu ku nu ra shi te yu ku
+i tsu shi ka hoo wo ki ra ri ki ra ri
 
-君（きみ）の手（て）は どうして こんなにも 温（あたた）かいの？
+熱(あつ)く 熱く 濡(ぬ)らしてゆく
+
+a tsu ku a tsu ku nu ra shi te yu ku
+
+君(きみ)の手(て)は どうして こんなにも 温(あたた)かいの？
 
 ki mi no te wa do u shi te kon na ni mo a ta ta ka i no ?
 
-ねえ お願（ねが）い　どうかこのまま
+ねえ お願(ねが)い　どうかこのまま
 
 nee o ne gai do u ka ko no ma ma
 
-離（はな）さないでいて
+離(はな)さないでいて
 
 ha na sa na i dei te
 
 ---
 
-縁（えん）を結（むす）んではほどきほどかれ誰（だれ）しもが
+縁(えん)を結(むす)んではほどきほどかれ誰(だれ)しもが
 
 en wo mu su n de wa ho do ki ho do ka re da re shi mo ga
 
-それを喜（よろこ）び　悲（かな）しみながら 愛（あい）を数（かぞ）えてゆく
+それを喜(よろこ)び　悲(かな)し
 
-so re wo yo ro ko bi ka na shi mi na ga ra ai wo ka zo e te yu ku
+so re wo yo ro ko bi ka na shi
 
-鼓動（こどう）を確（たし）かめるように
+みながら 愛(あい)を数(かぞ)えてゆく
+
+mi na ga ra ai wo ka zo e te yu ku
+
+鼓動(こどう)を確(たし)かめるように
 
 ko dou wo ta shi ka me ru you ni
 
@@ -95,7 +111,7 @@ ko dou wo ta shi ka me ru you ni
 
 u re shi ku te sa bi shi ku te
 
-今（いま）だからわかる気（き）がした
+今(いま)だからわかる気(き)がした
 
 i ma da ka ra wa ka ru ki ga shi ta
 
@@ -103,57 +119,65 @@ i ma da ka ra wa ka ru ki ga shi ta
 
 ta i se tsu de ko wa ku tte
 
-あの日（ひ）泣（な）けなかった僕（ぼく）を
+あの日(ひ)泣(な)けなかった僕(ぼく)を
 
 a no hi na ke na ka tta bo ku wo
 
-光（ひかり）はやさしく抱（だ）きしめた
+光(ひかり)はやさしく抱(だ)きしめた
 
 hi ka ri wa ya sa shi ku da ki shi me ta
 
 ---
 
-照（て）らされた世界（せかい）
+照(て)らされた世界(せかい)
 
 te ra sa re ta se ka i
 
-咲（さ）き誇（ほこ）る大切（たいせつ）な人（ひと）
+咲(さ)き誇(ほこ)る大切(たいせつ)な人(ひと)
 
 sa ki ho ko ru ta i se tsu na hi to
 
-あたたかさを知（し）った春（はる）は
+あたたかさを知(し)った
 
-a ta ta ka sa wo shi tta ha ru wa
+a ta ta ka sa wo shi tta
 
-僕（ぼく）のため　君（きみ）のための涙（なみだ）を流（なが）すよ
+春(はる)は僕(ぼく)のため　君(きみ)のための
 
-bo ku no ta me ki mi no ta me no na mi da wo na ga su yo
+ha ru wa bo ku no ta me ki mi no ta me no
 
-あぁ　なんて眩（まぶ）しいんだろう
+涙(なみだ)を流(なが)すよ
+
+na mi da wo na ga su yo
+
+あぁ　なんて眩(まぶ)しいんだろう
 
 a a nan te ma bu shi in da rou u
 
-あぁ　なんて美（うつく）しいんだろう
+あぁ　なんて美(うつく)しいんだろう
 
 a a nan te u tsu ku shi in da rou u ...
 
-雲間（くもま）をぬって きらり きらり 心満（こころみ）たしては溢（あふ）れ
+雲間(くもま)をぬって きらり きらり 心満(こころみ)たしては溢(あふ)れ
 
 ku mo ma wo nu tte ki ra ri ki ra ri ko ko ro mi ta shi te wa a fu re
 
-いつしか頬（ほお）を きらり きらり 熱（あつ）く 熱く 濡（ぬ）らしてゆく
+いつしか頬(ほお)を きらり きらり
 
-i tsu shi ka hoo wo ki ra ri ki ra ri a tsu ku a tsu ku nu ra shi te yu ku
+i tsu shi ka hoo wo ki ra ri ki ra ri
 
-君（きみ）の手（て）は どうして こんなにも 温（あたた）かいの？
+熱(あつ)く 熱く 濡(ぬ)らしてゆく
+
+a tsu ku a tsu ku nu ra shi te yu ku
+
+君(きみ)の手(て)は どうして こんなにも 温(あたた)かいの？
 
 ki mi no te wa do u shi te kon na ni mo a ta ta kai no ?
 
-ねえ お願（ねが）い　どうかこのまま
+ねえ お願(ねが)い　どうかこのまま
 
 nee o ne gai do u ka ko no ma ma
 
-離（はな）さないでいて
+離(はな)さないでいて
 
 ha na sa nai dei te
 
@@ -161,6 +185,6 @@ ha na sa nai dei te
 
 zu tto zu tto
 
-離（はな）さないでいて
+離(はな)さないでいて
 
 ha na sa nai dei te

@@ -13,41 +13,65 @@ draft: false
 
 <iframe width="100%" height="468" src="//player.bilibili.com/player.html?isOutside=true&aid=113827572091478&bvid=BV14BcaecEgu&cid=27887469364&p=2&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" &autoplay=0> </iframe>
 
-白銀の糸を伝い 想い 手繰り寄せてた
+白銀(はくぎん)の糸(いと)を伝(つた)い
 
-ha ku gi n no i to wo tsu ta i `|` o moi ta gu ri yo se te ta
+ha ku gi n no i to wo tsu ta i
 
-その果てで妊る月 抱きしめたなら
+想(おも)い 手繰(たぐ)り寄(よ)せてた
 
-so no ha te de mi go mo ru tsu ki `|` da ki shi me ta na ra
+o moi ta gu ri yo se te ta
 
-待っているの 太陽から夜が堕ちてくるのを
+その果(は)てで妊(みごも)る月(つき)
 
-ma tte i ru no ta i you ka ra `|` yo ru ga o chi te ku ru no wo
+so no ha te de mi go mo ru tsu ki
 
-ねぇ その果てで満たしてよ 届く気がするの
+抱(だ)きしめたなら
 
-nee so no ha te de mi ta shi te yo `|` to do ku ki ga su ru no
+da ki shi me ta na ra
 
-もつれたまま 踊る Georgette Me,Georgette You まわる
+待(ま)っているの
 
-mo tsu re ta ma ma `|` o do ru georgette me georgette you ma wa ru
+ma tte i ru no ta i you ka ra
 
-痛むほどに ほら 煌めくドレスを纏いながら
+太陽(たいよう)から夜(よる)が堕(お)ちてくるのを
 
-i ta mu ho do ni `|` ho ra `|` ki ra me ku do re su wo ma to i na ga ra
+yo ru ga o chi te ku ru no wo
+
+ねぇ その果(は)てで満(み)たしてよ
+
+nee so no ha te de mi ta shi te yo
+
+届(とど)く気(き)がするの
+
+to do ku ki ga su ru no
+
+もつれたまま
+
+mo tsu re ta ma ma
+
+踊(おど)る Georgette Me,Georgette You まわる
+
+o do ru georgette me georgette you ma wa ru
+
+痛(いた)むほどに (ほら)
+
+i ta mu ho do ni (ho ra)
+
+煌(きら)めくドレスを纏(まと)いながら
+
+ki ra me ku do re su wo ma to i na ga ra
 
 everlastin’ ever...
 
 darlin’ ever, ever...
 
-締め付けて again
+締(し)め付(つ)けて again
 
 shi me tsu ke te again
 
 everlastin’ ever...
 
-離れぬように
+離(はな)れぬように
 
 ha na re nu yo u ni
 
@@ -55,51 +79,79 @@ ever, ever, ever...
 
 ---
 
-縛るものはなに？それは 誰かの遠い祈り
+縛(しば)るものはなに？それは
 
-shi ba ru mo no wa na ni so re wa `|` da re ka no too ii no ri
+shi ba ru mo no wa na ni so re wa
 
-ああ 最初から知っていたわ 許されないこと
+誰(だれ)かの遠(とお)い祈(いの)り
 
-aa sa i sho ka ra shi tte i ta wa `|` yu ru sa re na i ko to
+da re ka no too ii no ri
 
-愛せぬまま 踊る Georgette Me, Georgette You is that true?
+ああ 最初(さいしょ)から知(し)っていたわ
 
-a i se nu ma ma `|` o do ru georgette me georgette you is that true
+aa sa i sho ka ra shi tte i ta wa
 
-あなたが触れたわ この傷口に
+許(ゆる)されないこと
 
-a na ta ga fu re ta wa `|` ko no ki zu gu chi ni
+yu ru sa re na i ko to
+
+愛(あい)せぬまま
+
+a i se nu ma ma
+
+踊(おど)る Georgette Me, Georgette You is that true?
+
+o do ru georgette me georgette you is that true
+
+あなたが触(ふ)れたわ
+
+a na ta ga fu re ta wa
+
+この傷口(きずぐち)に
+
+ko no ki zu gu chi ni
 
 ---
 
-もつれたまま 踊る Georgette Me, Georgette You まわる
+もつれたまま 踊(おど)る Georgette Me, Georgette You まわる
 
 mo tsu re ta ma ma o do ru georgette me georgette you ma wa ru
 
-このまま このままでいさせて
+このまま このままで
 
-ko no ma ma ko no ma ma de `|` i sa se te
+ko no ma ma ko no ma ma de
 
-愛せぬまま 踊る Georgette Me, Georgette You is that true?
+いさせて
 
-a i se nu ma ma `|` o do ru georgette me georgette you is that true
+i sa se te
 
-痛みは光ね 煌めくドレスを纏いながら
+愛(あい)せぬまま
 
-i ta mi wa hi ka ri ne `|` ki ra me ku do re su wo ma to i na ga ra
+a i se nu ma ma
+
+踊(おど)る Georgette Me, Georgette You is that true?
+
+o do ru georgette me georgette you is that true
+
+痛(いた)みは光(ひかり)ね
+
+i ta mi wa hi ka ri ne
+
+煌(きら)めくドレスを纏(まと)いながら
+
+ki ra me ku do re su wo ma to i na ga ra
 
 everlastin’ ever...
 
 darlin’ ever, ever...
 
-締め付けて again
+締(し)め付(つ)けて again
 
 shi me tsu ke te again
 
 everlastin’ ever...
 
-離れぬように
+離(はな)れぬように
 
 ha na re nu yo u ni
 

@@ -11,17 +11,17 @@ draft: false
 
 ## STAR BEAT!～ホシノコドウ～
 
-<iframe width="100%" height="468" src="//player.bilibili.com/player.html?isOutside=true&aid=31808055&bvid=BV1TW411k7pb&cid=55630455&p=2" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" &autoplay=0> </iframe>
+<iframe width="100%" height="468" src="//player.bilibili.com/player.html?isOutside=true&aid=31808055&bvid=BV1TW411k7pb&cid=55630455&p=2&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" &autoplay=0> </iframe>
 
 La la la la ~ La la la la ~ La la la la
 
 La la la la ~ La la la la ~ La la la la
 
-いくつもの夢を数えても
+幾(いく)つもの夢(ゆめ)を数(かぞ)えても
 
 i ku tsu mo no yu me wo ka zo e te mo
 
-聞こえないふり続けてきた
+聞(き)こえないふり続(つづ)けてきた
 
 ki ko e nai fu ri tsu zu ke te ki ta
 
@@ -29,11 +29,11 @@ ki ko e nai fu ri tsu zu ke te ki ta
 
 (ne e ki mi ki ko e ru)
 
-本当はずっと気付いてた
+本当(ほんとう)はずっと気(き)付(づ)いてた
 
 ho n to u wa zu tto ki zu i te ta
 
-記憶の底小さな声
+記憶(きおく)の底(そこ)小(ちい)さな声(こえ)
 
 ki o ku no so ko chi i sa na ko e
 
@@ -41,7 +41,7 @@ ki o ku no so ko chi i sa na ko e
 
 (so no ko e ki ko e ru)
 
-聞こえる
+聞(き)こえる
 
 ki ko e ru
 
@@ -49,7 +49,7 @@ ki ko e ru
 
 (ki ko e te ku ru ka ra ne e)
 
-星のコドウを
+星(ほし)の鼓動(こどう)を
 
 ho shi no ko do u wo
 
@@ -57,7 +57,7 @@ ho shi no ko do u wo
 
 (so tto) tsu ka ma e ta na ra
 
-その手でだきしめて
+その手(て)で抱(だ)きしめて
 
 so no te de da ki shi me te
 
@@ -65,23 +65,23 @@ so no te de da ki shi me te
 
 (da ki shi me te)
 
-(ねえ)もう離さない
+(ねえ)もう離(はな)さない
 
 (ne e) mo u ha na sa na i
 
-(ずっと)離したくない
+(ずっと)離(はな)したくない
 
 (zu tto) ha na shi ta ku na i
 
-わたしたちの STAR BEAT
+私達(わたしたち)の STAR BEAT
 
 wa ta shi ta chi no ~ STAR BEAT!
 
-走ってたいつも走ってた
+走(はし)ってたいつも走(はし)ってた
 
 ha shi tte ta i tsu mo ha shi tte ta
 
-愛と勇気を届けたい
+愛(あい)と勇気(ゆうき)を届(とど)けたい
 
 a i to yuu ki wo to do ke ta i
 
@@ -89,11 +89,11 @@ a i to yuu ki wo to do ke ta i
 
 (a fu re ru o mo i de)
 
-眠ってた声がいざなった
+眠(ねむ)ってた声(こえ)が誘(いざな)った
 
 ne mu tte ta ko e ga i za na tta
 
-風にゆれるキミの歌
+風(かぜ)に揺(ゆ)れるキミの歌(うた)
 
 ka ze ni yu re ru ki mi no u ta
 
@@ -101,15 +101,15 @@ ka ze ni yu re ru ki mi no u ta
 
 (yu me mi ru ko ko ru to)
 
-まぶた閉じてあきらめてたこと
+瞼(まぶた)閉(と)じて諦(あきら)めてたこと
 
 ma bu ta to ji te a ki ra me te ta ko to
 
-いま歌っていま奏でて
+いま歌(うた)っていま奏(かな)でて
 
 i ma u ta tte i ma ka na de te
 
-昨日までの日々に
+昨日(きのう)までの日々(ひび)に
 
 ki no u ma de no hi bi ni
 
@@ -119,11 +119,11 @@ sa yo na ra su ru
 
 ---
 
-あの日から聞こえ続けてる
+あの日(ひ)から聞(き)こえ続(つづ)けてる
 
 a no hi ka ra ki ko e tsu zu ke te ru
 
-こぎだす舟さえずる風
+漕(こ)ぎ出(だ)す舟(ふね)囀(さえず)る風(かぜ)
 
 ko gi da su fu ne sa e zu ru ka ze
 
@@ -131,11 +131,11 @@ ko gi da su fu ne sa e zu ru ka ze
 
 (ne e ki mi ki ko e ru)
 
-懐かしい記憶をたぐって
+懐(なつ)かしい記憶(きおく)を手繰(たぐ)って
 
 na tsu ka shi i ki o ku wo ta gu tte
 
-星がめぐり届ける声
+星(ほし)が巡(めぐ)り届(とど)ける声(こえ)
 
 ho shi ga me gu ri to do ke ru ko e
 
@@ -143,7 +143,7 @@ ho shi ga me gu ri to do ke ru ko e
 
 (so no ko e ki ko e ru)
 
-聞こえる
+聞(き)こえる
 
 ki ko e ru
 
@@ -151,35 +151,35 @@ ki ko e ru
 
 (ki ko e te ku ru ka ra ne e)
 
-キミのコドウに
+キミの鼓動(こどう)に
 
 ki mi no ko do u ni
 
-(そっと)歩幅を合わせ
+(そっと)歩幅(ほはば)を合(あ)わせ
 
 (so tto) ho ha ba wo a wa se
 
-明日を夢みてる
+明日(あした)を夢(ゆめ)見(み)てる
 
 a shi ta wo yu me mi te ru
 
-(ねえ)ひとつの気持ち
+(ねえ)ひとつの気持(きも)ち
 
 (ne e) hi to tsu no ki mo chi
 
-(ずっと)かかげ進もう
+(ずっと)掲(かか)げ進(すす)もう
 
 (zu tto) ka ka ge su su mo u
 
-声をあわせ STAR BEAT
+声(こえ)を合(あ)わせ STAR BEAT
 
 ko e wo a wa se ~ STAR BEAT!
 
-走りだす今日も走りだす
+走(はし)り出(だ)す今日(きょう)も走(はし)り出(だ)す
 
 ha shi ri da su kyo u mo ha shi ri da su
 
-愛と勇気を届けたい
+愛(あい)と勇気(ゆうき)を届(とど)けたい
 
 a i to yuu ki wo to do ke ta i
 
@@ -187,11 +187,11 @@ a i to yuu ki wo to do ke ta i
 
 (ta ka na ru ko ko ro de)
 
-眠ってる声が聞こえたら
+眠(ねむ)ってる声(こえ)が聞(き)こえたら
 
 ne mu tte ru ko e ga ki ko e ta ra
 
-意志と勇気が切なくて
+意志(いし)と勇気(ゆうき)が切(せつ)なくて
 
 i shi to yuu ki ga se tsu na ku te
 
@@ -199,15 +199,15 @@ i shi to yuu ki ga se tsu na ku te
 
 (to gi re ru o mo i de)
 
-まぶた閉じてあきらめてたこと
+瞼(まぶた)閉(と)じて諦(あきら)めてたこと
 
 ma bu ta to ji te a ki ra me te ta ko to
 
-いま笑っていま赦して
+いま笑(わら)っていま赦(ゆる)して
 
 i ma wa ra tte i ma yu ru shi te
 
-昨日までの日々に
+昨日(きのう)までの日々(ひび)に
 
 ki no u ma de no hi bi ni
 
@@ -221,11 +221,11 @@ La la la la ~ La la la la ~ La la la la
 
 ---
 
-遠くひとり願うだけだった
+遠(とお)くひとり願(ねが)うだけだった
 
 too ku hi to ri ne ga u da ke da tta
 
-夢のかけらまもること
+夢(ゆめ)の欠片(かけら)守(まも)ること
 
 yu me no ka ke ra ma mo ru ko to
 
@@ -233,11 +233,11 @@ yu me no ka ke ra ma mo ru ko to
 
 (ne e ki mi ki ko e ru)
 
-ずっとひとり祈るだけだった
+ずっとひとり祈(いの)るだけだった
 
 zu tto hi to ri i no ru da ke da tta
 
-キミと一緒に歌うこと
+キミと一緒(いっしょ)に歌(うた)うこと
 
 ki mi to i ssho ni u ta u ko to
 
@@ -247,11 +247,11 @@ ki mi to i ssho ni u ta u ko to
 
 ~~
 
-走りだすいつか走りだす
+走(はし)り出(だ)すいつか走(はし)り出(だ)す
 
 ha shi ri da su i tsu ka ha shi ri da su
 
-風にゆれるキミの歌
+風(かぜ)に揺(ゆ)れるキミの歌(うた)
 
 ka ze ni yu re ru ki mi no u ta
 
@@ -259,11 +259,11 @@ ka ze ni yu re ru ki mi no u ta
 
 (ne e ki mi ki ko e ru)
 
-走りだすいつか走りだす
+走(はし)り出(だ)すいつか走(はし)り出(だ)す
 
 ha shi ri da su i tsu ka ha shi ri da su
 
-届けたい歌キミの声
+届(とど)けたい歌(うた)キミの声(こえ)
 
 to do ke ta i u ta ki mi no ko e
 
@@ -271,15 +271,15 @@ to do ke ta i u ta ki mi no ko e
 
 (so no koe ki ko e ru)
 
-指をつなぎ始まったすべて
+指(ゆび)を繋(つな)ぎ始(はじ)まったすべて
 
 yu bi wo tsu na gi ha ji ma tta su be te
 
-いま歌っていま奏でて
+いま歌(うた)っていま奏(かな)でて
 
 i ma u ta tte i ma ka na de te
 
-昨日までの日々にサヨナラする
+昨日(きのう)までの日々(ひび)にサヨナラする
 
 ki no u ma de no hi bi ni sa yo na ra su ru
 

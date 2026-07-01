@@ -13,81 +13,89 @@ draft: false
 
 <iframe width="100%" height="468" src="//player.bilibili.com/player.html?isOutside=true&aid=114238446176469&bvid=BV1tvoDY3Eib&cid=29108211676&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" &autoplay=0> </iframe>
 
-ゆこう明日へと美しい時代よ
+行(ゆ)こう明日(あした)へと美(うつく)しい時代(とき)よ
 
 yu kou a shi ta e to u tsu ku shii to ki yo
 
-人は忘れてく
+人(ひと)は忘(わす)れてく
 
 hi to wa wa su re te ku
 
-心が闘ってたそう受け入れるため
+心(こころ)が闘(たたか)ってたそう受(う)け入(い)れるため
 
 ko ko ro ga ta ta ka tte ta souu ke i re ru ta me
 
-向こう側はあるのか
+向(む)こう側(がわ)はあるのか
 
 mu kou ga wa waa ru no ka
 
-嘘にも真実にもなれるだろう
+嘘(うそ)にも真実(しんじつ)にもなれるだろう
 
 u so ni mo shin ji tsu ni mo na re ru da rou
 
-歪みとは'らしさ'なのかもしれない
+歪(ゆが)みとは
 
-yu ga mi to wa ra shi sa na no ka mo shi re na i
+yu ga mi to wa
 
-目前にして押し寄せてくる最後の痛みを、ああ越えたら
+'らしさ'なのかもしれない
 
-mo ku zen ni shi te o shi yo se te ku ru sa i go no i ta mi wo aa ko e ta ra
+ra shi sa na no ka mo shi re na i
 
-ぼくらいま流れてく
+目前(もくぜん)にして押(お)し寄(よ)せてくる
+
+mo ku zen ni shi te o shi yo se te ku ru
+
+最後(さいご)の痛(いた)みを、ああ越(こ)えたら
+
+sa i go no i ta mi wo aa ko e ta ra
+
+ぼくらいま流(なが)れてく
 
 bo ku ra i ma na ga re te ku
 
 let's sing along let's sing along
 
-鮮やかな夜明けとともにさあ
+鮮(あざ)やかな夜明(よあ)けとともにさあ
 
 a za ya ka na yo a ke to to mo ni sa a
 
-ゆこう明日へと美しい時代よ
+行(ゆ)こう明日(あした)へと美(うつく)しい時代(とき)よ
 
 yu kou a shi ta e to u tsu ku shii to ki yo
 
-人は忘れてくいつかは消えてく
+人(ひと)は忘(わす)れてくいつかは消(き)えてく
 
 hi to wa wa su re te ku i tsu ka wa ki e te ku
 
 ---
 
-想いを綴るようになったのはなぜ
+想(おも)いを綴(つづ)るようになったのはなぜ
 
 o moi wo tsu zu ru you ni na tta no wa na ze
 
-光と闇を司るその命
+光(ひかり)と闇(やみ)を司(つかさど)るその命(いのち)
 
 hi ka ri to ya mi wo tsu ka sa do ru so noi no chi
 
-きっとすべてに物語がある
+きっとすべてに物語(ものがたり)がある
 
 ki tto su be te ni mo no ga ta ri ga a ru
 
 tell me a story.. tell me a story..
 
-叶うなら
+叶(かな)うなら
 
 ka na u na ra
 
-こんなに誰かを想うのはああ なぜ
+こんなに誰(だれ)かを想(おも)うのはああ なぜ
 
 kon na ni da re ka woo mou no wa aa na ze
 
-光と闇を抱いたまま胸焦がし
+光(ひかり)と闇(やみ)を抱(だ)いたまま胸(むね)焦(こ)がし
 
 hi ka ri to ya mi wo da i ta ma ma mu ne ko ga shi
 
-そうさすべてに物語がある
+そうさすべてに物語(ものがたり)がある
 
 sou sa su be te ni mo no ga ta ri ga a ru
 
@@ -95,56 +103,64 @@ tell me mo'.. tell me mo'..don't stop
 
 ---
 
-巡り逢うノイズの中魂のoverdrive
+巡(めぐ)り逢(あ)うノイズの中(なか)魂(たましい)のoverdrive
 
 me gu ri au no i zu no na ka ta ma shii no overdrive
 
-輝くよ何度も
+輝(かがや)くよ何度(なんど)も
 
 ka ga ya ku (k)yo nan do mo
 
-崩れてく失ってく
+崩(くず)れてく失(うしな)ってく
 
 ku zu re te ku u shi na tte ku
 
-ああずっと探してた刹那の遠い色
+ああずっと探(さが)してた
 
-aa zu tto sa ga shi te ta se tsu na no too ii ro
+aa zu tto sa ga shi te ta
 
-もしもこの詩が天球に夢のつづきを描くのなら
+刹那(せつな)の遠(とお)い色(いろ)
 
-mo shi mo ko no u ta ga so ra ni yu me no tsu zu ki wo e ga ku no na ra
+se tsu na no too ii ro
 
-見つめて
+もしもこの詩(うた)が
+
+mo shi mo ko no u ta ga
+
+天球(そら)に夢(ゆめ)のつづきを描(えが)くのなら
+
+so ra ni yu me no tsu zu ki wo e ga ku no na ra
+
+見(み)つめて
 
 mi tsu me te
 
-ぼくらいま解き放つ
+ぼくらいま解(と)き放(はな)つ
 
 bo ku ra i ma to ki ha na tsu
 
 let's sing along let's sing along
 
-張り裂ける心奏でてさあ
+張(は)り裂(さ)ける心(こころ)奏(かな)でてさあ
 
 ha ri sa ke ru ko ko ro ka na de te sa a
 
-ゆこう明日へと美しい時代よ
+行(ゆ)こう明日(あした)へと美(うつく)しい時代(とき)よ
 
 yu kou a shi ta e to u tsu ku shii to ki yo
 
-人は忘れてく いつかは消えてく
+人(ひと)は忘(わす)れてく いつかは消(き)えてく
 
 hi to wa wa su re te ku i tsu ka wa ki e te ku
 
-ゆこう（Ave Mujica｜世界）へと
+行(ゆ)こう(Ave Mujica｜世界(せかい))へと
 
 yu ko u se ka i e to
 
-美しい時代よ
+美(うつく)しい時代(じだい)よ
 
-u tsu ku shi i ji da i yo
+u tsu ku shii ji da i yo
 
-人は忘れてくいつかは消えてく
+人(ひと)は忘(わす)れてくいつかは消(き)えてく
 
 hi to wa wa su re te ku i tsu ka wa ki e te ku

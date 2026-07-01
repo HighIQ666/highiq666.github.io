@@ -11,7 +11,7 @@ draft: false
 
 ## FIRE BIRD
 
-<iframe width="100%" height="468" src="//player.bilibili.com/player.html?isOutside=true&aid=971784765&bvid=BV1vp4y1n7u9&cid=301187481&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" &autoplay=0> </iframe>
+<iframe width="100%" height="468" src="//player.bilibili.com/player.html?isOutside=true&aid=971784765&bvid=BV1vp4y1n7u9&cid=301187481&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" &autoplay=0> </iframe>
 
 空(そら)がどんな 高(たか)くても
 

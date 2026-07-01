@@ -4,7 +4,7 @@ published: 2026-02-01
 description: "Romaji of Here, the world!"
 cover: "./cover.jpg"
 pinned: false
-tags: [Sumimi]
+tags: (Sumimi)
 category: Romaji
 draft: false
 ---
@@ -13,43 +13,69 @@ draft: false
 
 <iframe width="100%" height="468" src="//player.bilibili.com/player.html?isOutside=true&aid=113814133546136&bvid=BV1N6cuehESU&cid=27849853067&p=2&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" &autoplay=0> </iframe>
 
-"Here, the world!" 繋ごう
+"Here, the world!"
 
-“Here, the world!”  tsu na gou
+繋(つな)ごう
 
-鼓動 リズム生まれるニューソング
+tsu na gou
 
-ko dou rhythm `(ri zu muu)` ma re ru new song `(nyu u so n g u)`
+鼓動(こどう) リズム
 
-"Here, the world!" 未来は明るいよ
+ko dou rhythm `(ri zu muu)`
 
-“Here, the world” mi rai wa a ka rui yo
+生(う)まれるニューソング
 
-足早(あしばや) な いつものアベニュー
+u ma re ru new song `(nyu u so n g u)`
 
-a shi ba ya na i tsu mo no avenue `(a be nyuu)`
+"Here, the world!"
 
-どこ行くの? [Oh, gosh] I wonder... [Woo]
+未来(みらい)は明(あか)るいよ
 
-do koi ku no (oh gosh) I wonder (woo)
+mi rai wa a ka rui yo
 
-忙しさを言い訳にするクセ
+足早(あしばや)な
 
-i so ga shi sa wo ii wa ke ni su ru ku se
+a shi ba ya na
 
-Ah Repeating... それじゃダメだよね
+いつものアベニュー
 
-Ah Repeating so re ja da me da yo ne
+i tsu mo no avenue `(a be nyuu)`
 
-誰だって Night and day すこし悩んで
+どこ行(い)くの? (Oh, gosh)
 
-da re da tte Night and day su ko shi na yan de
+do koi ku no (oh gosh)
 
-光と影行ったり来たりで
+I wonder ... (woo)
 
-hi ka ri to ka ge i tta ri ki ta ri de
+忙(いそが)しさを言(い)い訳(わけ)にするクセ
 
-だけどそこでドラマ始まって
+i so ga (shi) sa wo ii wa ke ni su ru ku se
+
+Ah Repeating...
+
+それじゃダメだよね
+
+so re ja da me da yo ne
+
+誰(だれ)だって
+
+da re da tte
+
+Night and day
+
+すこし悩(なや)んで
+
+su ko shi na yan de
+
+光(ひかり)と影(かげ)
+
+hi ka ri to ka ge
+
+行(い)ったり来(き)たりで
+
+i tta ri ki ta ri de
+
+だけどそこでドラマ始(はじ)まって
 
 da ke do so ko de do ra ma ha ji ma tte
 
@@ -61,45 +87,63 @@ mi ra i re n sa ha ji ke te yu ku
 
 nee I/My/Me wa secret (shii ku re tto) silhouette (shi ru e tto)
 
-未知数でしょ 手のひら舞う Dreams
+未知数(みちすう)でしょ 手(て)のひら舞(ま)う Dreams
 
 mi chi suu de sho te no hi ra mau Dreams
 
-曖昧だった 夜(よる)を 何度
+曖昧(あいまい)だった 夜(よる)を 何度(なんど)
 
 ai mai da tta yo (ru wo) `ro` nan do
 
-越えた先が 最高の幕開けだよ OK!?
+越(こ)えた先(さき)が 最高(さいこう)の幕開(まくあ)けだよ
 
-ko e ta sa ki ga sai kou no ma ku a ke da yo OK?
+ko e ta sa ki ga sai kou no ma ku a ke da yo
 
-Juicy, Juicy moment! 段々 Juicy, Juicy oh yeah!
+OK?
 
-Juicy, Juicy moment! dan dan Juicy Juicy oh yeah!
+Juicy, Juicy moment!
 
-ほら果汁みたいに Let's bloom together!
+段々(だんだん)
 
-ho ra ka ju u mi tai ni Let’s bloom together!
+dan dan
 
-Juicy, Juicy moment! 益々(ますます) Juicy, Juicy oh yeah!
+Juicy Juicy oh yeah!
 
-Juicy, Juicy moment! ma su ma su Juicy, Juicy oh yeah!
+ほら果汁(かじゅう)みたいに
 
-ほら世界にはヒトリじゃ描けない 夢ばかりだよ
+ho ra ka ju u mi tai ni
 
-ho ra se ka i ni wa hi to ri ja e ga ke nai `|` yu me ba ka ri da yo
+Let’s bloom together!
 
-"Here, the world!" 繋ごうこのメロディー
+Juicy, Juicy moment!
 
-“Here, the world!” tsu na gou ko no melody `(me ro dii)`
+益々(ますます)
+
+ma su ma su
+
+Juicy, Juicy oh yeah!
+
+ほら世界(せかい)にはヒトリじゃ描(えが)けない
+
+ho ra se ka i ni wa hi to ri ja e ga ke nai
+
+夢(ゆめ)ばかりだよ
+
+yu me ba ka ri da yo
+
+"Here, the world!"
+
+繋(つな)ごうこのメロディー
+
+tsu na gou ko no melody `(me ro dii)`
 
 ---
 
-斜(しゃ)に構えてばかりじゃ [Oh, gosh]
+斜(しゃ)に構(かま)えてばかりじゃ (Oh, gosh)
 
 sha ni ka ma e ta ba ka ri ja (oh gosh)
 
-世界も知らんぷりさほらNo good [Let it go]
+世界(せかい)も知(し)らんぷりさほらNo good (Let it go)
 
 se kai mo shi ran pu ri sa ho ra no good (let it go)
 
@@ -107,138 +151,202 @@ se kai mo shi ran pu ri sa ho ra no good (let it go)
 
 audrey `(oo do rii)` da tte beginner `(bi gi naa)` da tta tte
 
-夢の純度濁らせずに
+夢(ゆめ)の純度(じゅんど)濁(にご)らせずに
 
 yu me no jun do ni go ra se zu ni
 
-似てるメランコリー隠した君と
+似(に)てるメランコリー
 
-ni te ru me ran ko rii ka ku shi ta ki mi to
+ni te ru me ran ko rii
 
-性格違うのに惹(ひ)き合う引力
+隠(かく)した君(きみ)と
 
-sei ka ku chi gau no ni hi ki au in ryo ku
+ka ku shi ta ki mi to
 
-些細(ささい)なセリフ 伏線 (ふくせん)みたいって
+性格(せいかく)違(ちが)うのに
 
-sa sa i na se ri fu fu ku se n mi tai tte
+sei ka ku chi gau no ni
 
-シアターモードで気付いてゆく
+惹(ひ)き合(あ)う引力(いんりょく)
 
-theater mode `(shia taa mo o de)` ki zu i te yu ku
+hi ki au in ryo ku
+
+些細(ささい)なセリフ 伏線(ふくせん)みたいって
+
+sa sai na se ri fu fu ku se n mi tai tte
+
+シアターモードで気付(きづ)いてゆく
+
+theater mode `(shia taa mo o do)` de ki zu i te yu ku
 
 ねぇ?I(アイ)/ My(マイ) / Me(ミー)は シークレット シルエット
 
 nee I/My/Me wa secret (shii ku re tto) silhouette (shi ru e tto)
 
-それが良いよ 君と笑うたび
+それが良(い)いよ 君(きみ)と笑(わら)うたび
 
 so re ga ii yo ki mi to wa rau ta bi
 
-変わっていく今日が 明日(あす)が
+変(か)わっていく今日(きょう)が 明日(あす)が
 
 ka wa ttei ku kyou ga a su ga
 
-見違えちゃう出逢いの魔法かもね OK!?
+見違(みちが)えちゃう出逢(であ)いの魔法(まほう)かもね OK!?
 
 mi chi ga e cha u de ai no ma hou ka mo ne OK?
 
-Juicy, Juicy moment! 段々 Juicy, Juicy oh yeah!
+Juicy, Juicy moment!
 
-Juicy, Juicy moment! dan dan Juicy Juicy oh yeah!
+段々(だんだん)
 
-また宇宙みたいに Let's spread it out!
+dan dan
 
-ma ta u chuu mi tai ni Let’s spread it out!
+Juicy Juicy oh yeah!
 
-Juicy, Juicy moment! 益々(ますます) Juicy, Juicy oh yeah!
+また宇宙(うちゅう)みたいに
 
-Juicy, Juicy moment! ma su ma su Juicy, Juicy oh yeah!
+ma ta u chuu mi tai ni
 
-このワードローブの世界の隅から
+Let’s spread it out!
+
+Juicy, Juicy moment!
+
+益々(ますます)
+
+ma su ma su
+
+Juicy, Juicy oh yeah!
+
+このワードローブの世界(せかい)の隅(すみ)から
 
 ko no wardrobe `(waa do roo bu)` no se ka i no su mi ka ra
 
-彩らせていく
+彩(いろど)らせていく
 
 i ro do ra se tei ku
 
 ---
 
-She(シー) / Her(ハー)/ Her(ハー)って吸って吐いて
+She(シー) / Her(ハー)/ Her(ハー)って吸(す)って
 
-she/her/he tte su tte hai te
+she/her/he tte su tte
 
-生きてるって感じて
+吐(は)いて生(い)きてるって感(かん)じて
 
-i ki te ru tte kan ji te
+hai te i ki te ru tte kan ji te
 
-踊りだす鼓動 そのすべてミュージック
+踊(おど)りだす鼓動(こどう)
 
-o do ri da su ko dou `|` so no su be te music `(myuu ji kku)`
+o do ri da su ko dou
 
-地球儀 回せば まだ見ぬ 場所にも
+そのすべてミュージック
 
-chi kyu u gi ma wa se ba ma da mi nu ba sho ni mo
+so no su be te music `(myuu ji kku)`
 
-ハッピーで飛べそうさ “We're the world!"
+地球儀(ちきゅうぎ)
 
-happy `(ha ppii)` de to be sou sa “We’re the world”
+chi kyu u gi
+
+回(まわ)せば
+
+ma wa se ba
+
+まだ見(み)ぬ
+
+ma da mi nu
+
+場所(ばしょ)にも
+
+ba sho ni mo
+
+ハッピーで飛(と)べそうさ
+
+happy `(ha ppii)` de to be sou sa
+
+We’re the world!
 
 ---
 
-[Woo...Yeah] Let's bloom together! [Do!]
+(Woo...Yeah)
 
-Let's spread it out! [Yeah!]
+Let's bloom together! (Do!)
 
-互い願ったまま
+Let's spread it out! (Yeah!)
 
-ta gai na ga tta ma ma
+互(たが)い願(ねが)ったまま
+
+ta gai ne ga tta ma ma
 
 パーフェクトシルエット
 
 perfect (paa fe ku to) silhouette (shi ru e tto)
 
-未知数でしょ 手のひら舞う Dreams
+未知数(みちすう)でしょ 手(て)のひら舞(ま)う Dreams
 
 mi chi suu de sho te no hi ra mau Dreams
 
-曖昧だった 夜(よる)を 何度
+曖昧(あいまい)だった 夜(よる)を 何度(なんど)
 
 ai mai da tta yo (ru wo) `ro` nan do
 
-越えた先が 最高の幕開けだよ OK!?
+越(こ)えた先(さき)が 最高(さいこう)の幕開(まくあ)けだよ
 
-ko e ta sa ki ga sai kou no ma ku a ke da yo OK?
+ko e ta sa ki ga sai kou no ma ku a ke da yo
 
-Juicy, Juicy moment! 段々 Juicy, Juicy oh yeah!
+OK?
 
-Juicy, Juicy moment! dan dan Juicy Juicy oh yeah!
+Juicy, Juicy moment!
 
-ほら果汁みたいに Let's bloom together!
+段々(だんだん)
 
-ho ra ka ju u mi tai ni Let’s bloom together!
+dan dan
 
-Juicy, Juicy moment! 益々(ますます) Juicy, Juicy oh yeah!
+Juicy Juicy oh yeah!
 
-Juicy, Juicy moment! ma su ma su Juicy, Juicy oh yeah!
+ほら果汁(かじゅう)みたいに
 
-ほら世界にはヒトリじゃ描けない 夢ばかりだよ
+ho ra ka ju u mi tai ni
 
-ho ra se ka i ni wa hi to ri ja e ga ke nai `|` yu me ba ka ri da yo
+Let’s bloom together!
 
-"Here, the world!" 繋ごう
+Juicy, Juicy moment!
 
-“Here, the world!”  tsu na gou
+益々(ますます)
 
-鼓動 リズム生まれるニューソング
+ma su ma su
 
-ko dou rhythm `(ri zu muu)` ma re ru new song `(nyu u so n g u)`
+Juicy, Juicy oh yeah!
 
-"Here, the world!" [Never end!] 未来を疑わない
+ほら世界(せかい)にはヒトリじゃ描(えが)けない
 
-"Here, the world!" [Never end!] mi rai wo u ta ga wa nai
+ho ra se ka i ni wa hi to ri ja e ga ke nai
 
-君とね Bless the world!
+夢(ゆめ)ばかりだよ
 
-ki mi to ne Bless the world!
+yu me ba ka ri da yo
+
+"Here, the world!"
+
+繋(つな)ごう
+
+tsu na gou
+
+鼓動(こどう) リズム
+
+ko dou rhythm `(ri zu muu)`
+
+生(う)まれるニューソング
+
+ma re ru new song `(nyu u so n g u)`
+
+"Here, the world!" (Never end!)
+
+未来(みらい)を疑(うたが)わない
+
+mi rai wo u ta ga wa nai
+
+君(きみ)とね
+
+ki mi to ne
+
+Bless the world!
