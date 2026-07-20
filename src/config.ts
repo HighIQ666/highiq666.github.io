@@ -77,6 +77,15 @@ const normalizeNavbarLinks = (links: Array<NavbarLink | LinkPreset | string>) =>
 
 const resolvedPostConfig: PostConfig = {
     ...config.post,
+    card: config.post.card ?? {
+        cover: {
+            side: "right",
+            width: "45%",
+            showContent: false,
+            showDefaultCover: true,
+        },
+        titleSize: "text-2xl",
+    },
     comment: {
         ...config.post.comment,
         provider: config.post.comment.provider
