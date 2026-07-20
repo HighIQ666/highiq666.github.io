@@ -109,16 +109,68 @@ const {
         )
     }
 
-    <!-- Banner - 总是渲染但通过CSS控制可见性 -->
+    <!-- Banner - 只在主页显示 -->
     <Banner
         config={siteConfig.wallpaper}
         isHomePage={isHomePage}
-        class={siteConfig.wallpaper.mode === "banner" ? "" : "hidden"}
+        class={isHomePage ? "" : "hidden"}
     />
+
+    {/* 首页 banner ↔ fullscreen 切换逻辑（主页专用） */}
+    {isHomePage && (
+        <script>
+            import { setWallpaperMode } from '@utils/wallpaper';
+
+            (function() {
+                const SCROLL_THRESHOLD = 50;
+                let ticking = false;
+                let isCollapsed = false;
+
+                function isOnHomePage() {
+                    // 检查 body 是否有 is-home class
+                    return document.body.classList.contains('is-home');
+                }
+
+                function updateBannerState() {
+                    // 只有在首页时才执行模式切换
+                    if (!isOnHomePage()) {
+                        isCollapsed = false;
+                        ticking = false;
+                        return;
+                    }
+
+                    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+                    const shouldCollapse = scrollTop > SCROLL_THRESHOLD;
+
+                    if (shouldCollapse && !isCollapsed) {
+                        // 切换到 fullscreen 模式
+                        setWallpaperMode('fullscreen');
+                        isCollapsed = true;
+                    } else if (!shouldCollapse && isCollapsed) {
+                        // 切换回 banner 模式
+                        setWallpaperMode('banner');
+                        isCollapsed = false;
+                    }
+                    ticking = false;
+                }
+
+                function onScroll() {
+                    if (!ticking) {
+                        requestAnimationFrame(updateBannerState);
+                        ticking = true;
+                    }
+                }
+
+                window.addEventListener('scroll', onScroll, { passive: true });
+                // 初始化状态
+                updateBannerState();
+            })();
+        </script>
+    )}
 
     <!-- Main content -->
     <div
-        class={`absolute w-full z-30 pointer-events-none transition-transform duration-600 top-0 min-h-[calc(100vh-var(--main-content-top))] ${siteConfig.wallpaper.mode !== "banner" ? "no-banner-layout" : ""} ${transparentClass}`}
+        class={`absolute w-full z-30 pointer-events-none transition-transform duration-600 top-0 min-h-[calc(100vh-var(--main-content-top))] ${siteConfig.wallpaper.mode !== "banner" ? "no-banner-layout fullscreen-top-offset" : ""} ${transparentClass}`}
         style="transform: translateY(var(--main-content-top))"
     >
         <div

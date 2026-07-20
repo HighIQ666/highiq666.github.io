@@ -3,6 +3,11 @@
     /* top and min-height are now handled by inline style in grid.astro */
 }
 
+/* fullscreen 模式下主内容区域保持顶部偏移，让非吸附板块和其他板块对齐 */
+.fullscreen-top-offset {
+    padding-top: calc(var(--sidebar-top) + 1rem);
+}
+
 /* 隐藏已收起横幅或非横幅模式时的图片版权描述 */
 .no-banner-layout #banner-credit {
     display: none !important;
