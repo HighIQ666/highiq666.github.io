@@ -5,6 +5,15 @@ import Icon from "@iconify/svelte";
 
 import type { MusicPlayerTrack } from "@/types/config";
 import { musicPlayerConfig } from "@/config";
+import { 
+    STORAGE_KEYS, 
+    formatTime, 
+    getAssetPath, 
+    parseLRC, 
+    fetchLyrics, 
+    fetchMetingPlaylist as fetchMetingPlaylistUtil,
+    fadeInAudio 
+} from "@/utils/music";
 import { i18n } from "@i18n/translation";
 import Key from "@i18n/i18nKey";
 import "@styles/musicplayer.css";
@@ -13,7 +22,7 @@ import "@styles/musicplayer.css";
 // 音乐播放器模式，可选 "local" 或 "meting"
 let mode = $state(musicPlayerConfig.mode ?? "meting");
 // Meting API 地址，从配置中获取或使用默认值
-let meting_api = musicPlayerConfig.meting?.meting_api ?? "https://api.i-meto.com/meting/api";
+let meting_api = musicPlayerConfig.meting?.meting_api ?? "https://meting.spr-aachen.com/api";
 // Meting API 的数据源，从配置中获取或使用默认值
 let meting_server = musicPlayerConfig.meting?.server ?? "netease";
 // Meting API 的类型，从配置中获取或使用默认值
@@ -68,20 +77,106 @@ let lastSaveTime = 0;
 let errorMessage = $state("");
 // 是否显示错误信息
 let showError = $state(false);
+// 音量过渡间隔
+let fadeInterval: number | null = null;
 
-// 存储键名常量
-const STORAGE_KEYS = {
-    USER_PAUSED: "player_user_paused",
-    VOLUME: "player_volume",
-    SHUFFLE: "player_shuffle",
-    REPEAT: "player_repeat",
-    LAST_SONG_ID: "player_last_song_id",
-    LAST_SONG_PROGRESS: "player_last_song_progress",
-};
+// Lyrics State
+let lyrics: { time: number; text: string }[] = $state([]);
+let currentLrcIndex = $state(-1);
+let lrcContainer: HTMLElement | undefined = $state();
+let isUserScrolling = $state(false);
+let scrollTimeout: number | null = null;
+let noLyrics = $state(false); // Flag if no lyrics available
+
+// Load lyrics function
+async function loadLyrics(song: MusicPlayerTrack) {
+    lyrics = [];
+    currentLrcIndex = -1;
+    noLyrics = false;
+    
+    if (!song.lrc) {
+        noLyrics = true;
+        return;
+    }
+
+    const lrcText = await fetchLyrics(song.lrc);
+
+    if (lrcText) {
+        lyrics = parseLRC(lrcText);
+        if (lyrics.length === 0) noLyrics = true;
+    } else {
+        noLyrics = true;
+    }
+}
+
+// Seek to lyric time
+function seekToLyric(time: number) {
+    if (!audio) return;
+    audio.currentTime = time;
+    currentTime = time;
+    if (!isPlaying) {
+        togglePlay();
+    }
+}
+
+// Scroll logic
+function handleLrcScroll() {
+    isUserScrolling = true;
+    if (lrcContainer) {
+        lrcContainer.classList.add('scrolling');
+    }
+    if (scrollTimeout) clearTimeout(scrollTimeout);
+    scrollTimeout = window.setTimeout(() => {
+        isUserScrolling = false;
+        if (lrcContainer) {
+            lrcContainer.classList.remove('scrolling');
+        }
+    }, 2000);
+}
+
+// Update lyrics on timeupdate
+function updateLyrics(currentTime: number) {
+    if (lyrics.length === 0) return;
+    
+    let index = -1;
+    for (let i = 0; i < lyrics.length; i++) {
+        if (currentTime >= lyrics[i].time) {
+            index = i;
+        } else {
+            break;
+        }
+    }
+    
+    if (index !== currentLrcIndex) {
+        currentLrcIndex = index;
+        if (!isUserScrolling && lrcContainer && index !== -1) {
+             const lines = lrcContainer.querySelectorAll('.lyric-line');
+             const activeLine = lines[index] as HTMLElement;
+             if (activeLine) {
+                 const containerHeight = lrcContainer.clientHeight;
+                 const lineOffset = activeLine.offsetTop;
+                 const lineHeight = activeLine.offsetHeight;
+                 const scrollTop = lineOffset - (containerHeight / 2) + (lineHeight / 2);
+                 lrcContainer.scrollTo({
+                     top: scrollTop,
+                     behavior: 'smooth'
+                 });
+             }
+        }
+    }
+}
+
+function fadeInVolume(targetVolume: number, duration: number = 2000) {
+    if (!audio) return;
+    if (fadeInterval) clearInterval(fadeInterval);
+    
+    fadeInterval = fadeInAudio(audio, targetVolume, duration, () => {
+        fadeInterval = null;
+    });
+}
 
 function restoreLastSong() {
     if (playlist.length === 0) return;
-
     if (typeof localStorage !== 'undefined') {
         const lastId = localStorage.getItem(STORAGE_KEYS.LAST_SONG_ID);
         let index = -1;
@@ -116,32 +211,13 @@ function showErrorMessage(message: string) {
 async function fetchMetingPlaylist() {
     if (!meting_api || !meting_id) return;
     isLoading = true;
-    const query = new URLSearchParams({
-        server: meting_server,
-        type: meting_type,
-        id: meting_id,
-    });
-    const separator = meting_api.includes("?") ? "&" : "?";
-    const apiUrl = `${meting_api}${separator}${query.toString()}`;
     try {
-        const res = await fetch(apiUrl);
-        if (!res.ok) throw new Error("meting api error");
-        const list = await res.json();
-        playlist = list.map((song: any, index: number) => {
-            let title = song.name ?? song.title ?? i18n(Key.musicUnknownTrack);
-            let artist = song.artist ?? song.author ?? i18n(Key.musicUnknownArtist);
-            let dur = song.duration ?? 0;
-            if (dur > 10000) dur = Math.floor(dur / 1000);
-            if (!Number.isFinite(dur) || dur <= 0) dur = 0;
-            return {
-                id: song.id ?? `meting-${index}`, // 确保每个歌曲都有 ID
-                title,
-                artist,
-                cover: song.pic ?? "",
-                url: song.url ?? "",
-                duration: dur,
-            };
-        });
+        playlist = await fetchMetingPlaylistUtil(
+            meting_api,
+            meting_server,
+            meting_type,
+            meting_id
+        );
         if (playlist.length > 0) {
             // 使用 setTimeout 确保 Svelte 响应式变量已更新
             setTimeout(() => {
@@ -186,12 +262,21 @@ async function toggleMode() {
 function togglePlay() {
     if (!audio || !currentSong.url) return;
     if (isPlaying) {
+        if (fadeInterval) {
+            clearInterval(fadeInterval);
+            fadeInterval = null;
+        }
         audio.pause();
         if (typeof localStorage !== 'undefined') {
             localStorage.setItem(STORAGE_KEYS.USER_PAUSED, "true");
         }
     } else {
-        audio.play();
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+            playPromise.then(() => {
+                fadeInVolume(volume);
+            }).catch(() => {});
+        }
         if (typeof localStorage !== 'undefined') {
             localStorage.setItem(STORAGE_KEYS.USER_PAUSED, "false");
         }
@@ -209,25 +294,29 @@ function togglePlaylist() {
     showPlaylist = !showPlaylist;
 }
 
-function toggleShuffle() {
-    isShuffled = !isShuffled;
-    if (isShuffled) {
-        isRepeating = 0;
-    }
-    if (typeof localStorage !== 'undefined') {
-        localStorage.setItem(STORAGE_KEYS.SHUFFLE, String(isShuffled));
-        localStorage.setItem(STORAGE_KEYS.REPEAT, String(isRepeating));
-    }
+let showLyrics = $state(true);
+
+function toggleLyrics() {
+    showLyrics = !showLyrics;
 }
 
-function toggleRepeat() {
-    isRepeating = (isRepeating + 1) % 3;
-    if (isRepeating !== 0) {
+function togglePlaybackMode() {
+    if (isRepeating === 1) {
+        // Single -> Sequence
         isShuffled = false;
+        isRepeating = 2;
+    } else if (isShuffled) {
+        // Shuffle -> Single
+        isShuffled = false;
+        isRepeating = 1;
+    } else {
+        // Sequence -> Shuffle
+        isShuffled = true;
+        isRepeating = 2;
     }
     if (typeof localStorage !== 'undefined') {
-        localStorage.setItem(STORAGE_KEYS.REPEAT, String(isRepeating));
         localStorage.setItem(STORAGE_KEYS.SHUFFLE, String(isShuffled));
+        localStorage.setItem(STORAGE_KEYS.REPEAT, String(isRepeating));
     }
 }
 
@@ -257,17 +346,11 @@ function playSong(index: number) {
     shouldPlay = true;
     // 用户手动选择歌曲，清除暂停偏好和待恢复进度
      if (typeof localStorage !== 'undefined') {
-         localStorage.setItem(STORAGE_KEYS.USER_PAUSED, "false");
-     }
+        localStorage.setItem(STORAGE_KEYS.USER_PAUSED, "false");
+    }
     pendingProgress = 0;
     // 加载歌曲
     loadSong(playlist[currentIndex]);
-}
-
-function getAssetPath(path: string): string {
-    if (path.startsWith("http://") || path.startsWith("https://")) return path;
-    if (path.startsWith("/")) return path;
-    return `/${path}`;
 }
 
 function loadSong(song: MusicPlayerTrack) {
@@ -283,6 +366,7 @@ function loadSong(song: MusicPlayerTrack) {
     }
     if (song.url) {
         isLoading = true;
+        loadLyrics(song);
         // 如果有待恢复的进度，先不要重置为 0，以免进度条跳变
         if (pendingProgress > 0) {
             currentTime = pendingProgress;
@@ -326,6 +410,7 @@ function handleLoadSuccess() {
         const playPromise = audio?.play();
         if (playPromise !== undefined) {
             playPromise.then(() => {
+                fadeInVolume(volume);
                 // 播放成功后，关闭自动播放标记，后续由用户控制
                 isAutoplayEnabled = false;
                 autoplayFailed = false;
@@ -347,6 +432,7 @@ function handleUserInteraction() {
         const playPromise = audio.play();
         if (playPromise !== undefined) {
             playPromise.then(() => {
+                fadeInVolume(volume);
                 autoplayFailed = false;
             }).catch(() => {});
         }
@@ -409,6 +495,10 @@ function stopVolumeDrag() {
 
 function updateVolumeLogic(clientX: number) {
     if (!audio || !volumeBar) return;
+    if (fadeInterval) {
+        clearInterval(fadeInterval);
+        fadeInterval = null;
+    }
     const rect = volumeBarRect || volumeBar.getBoundingClientRect();
     const percent = Math.max(
         0,
@@ -424,15 +514,12 @@ function updateVolumeLogic(clientX: number) {
 
 function toggleMute() {
     if (!audio) return;
+    if (fadeInterval) {
+        clearInterval(fadeInterval);
+        fadeInterval = null;
+    }
     isMuted = !isMuted;
     audio.muted = isMuted;
-}
-
-function formatTime(seconds: number): string {
-    if (!Number.isFinite(seconds) || seconds < 0) return "0:00";
-    const mins = Math.floor(seconds / 60);
-    const secs = Math.floor(seconds % 60);
-    return `${mins}:${secs.toString().padStart(2, "0")}`;
 }
 
 function handleAudioEvents() {
@@ -452,6 +539,7 @@ function handleAudioEvents() {
     audio.addEventListener("timeupdate", () => {
         if (!audio) return;
         currentTime = audio.currentTime;
+        updateLyrics(currentTime);
         // 每 2.1 秒保存一次进度，或者在歌曲接近结束时（虽然结束时可能不需要记忆，但为了保险）
         const now = Date.now();
         if (now - lastSaveTime > 2100) {
@@ -470,7 +558,9 @@ function handleAudioEvents() {
         // 单曲循环时，重置进度到开始
         if (isRepeating === 1) {
             audio.currentTime = 0;
-            audio.play().catch(() => {});
+            audio.play().then(() => {
+                fadeInVolume(volume);
+            }).catch(() => {});
         } else if (
             isRepeating === 2 ||
             isShuffled ||
@@ -536,6 +626,10 @@ onMount(() => {
 });
 
 onDestroy(() => {
+    if (fadeInterval) {
+        clearInterval(fadeInterval);
+        fadeInterval = null;
+    }
     if (typeof document !== 'undefined') {
         interactionEvents.forEach(event => {
             document.removeEventListener(event, handleUserInteraction, { capture: true });
@@ -555,9 +649,9 @@ onDestroy(() => {
 
 {#if musicPlayerConfig.enable}
 {#if showError}
-<div class="music-player-error fixed bottom-20 right-4 z-[60] max-w-sm onload-animation-up">
+<div class="music-player-error fixed bottom-20 right-4 z-60 max-w-sm onload-animation-up">
     <div class="bg-red-500 text-white px-4 py-3 rounded-lg shadow-lg flex items-center gap-3 animate-slide-up">
-        <Icon icon="material-symbols:error" class="text-xl flex-shrink-0" />
+        <Icon icon="material-symbols:error" class="text-xl shrink-0" />
         <span class="text-sm flex-1">{errorMessage}</span>
         <button onclick={hideError} class="text-white/80 hover:text-white transition-colors">
             <Icon icon="material-symbols:close" class="text-lg" />
@@ -566,13 +660,78 @@ onDestroy(() => {
 </div>
 {/if}
 
-<div class="music-player fixed bottom-4 right-4 z-[101] transition-all duration-300 ease-in-out onload-animation-up"
+<div class="music-player fixed bottom-4 right-4 z-101 transition-all duration-300 ease-in-out onload-animation-up flex flex-col items-end pointer-events-none"
      class:expanded={!isCollapsed}
      class:collapsed={isCollapsed}>
+    {#if showPlaylist}
+        <div class="playlist-panel float-panel w-80 max-h-96 overflow-hidden z-50 mb-4 pointer-events-auto"
+             transition:slide={{ duration: 300, axis: 'y' }}>
+            <div class="playlist-header flex items-center justify-between p-4 border-b border-(--line-divider)">
+                <h3 class="text-lg font-semibold text-90">{i18n(Key.playlist)}</h3>
+                <div class="flex items-center gap-1">
+                    {#if mode === "meting"}
+                        <button class="btn-plain w-8 h-8 rounded-lg flex items-center justify-center"
+                                onclick={fetchMetingPlaylist}
+                                disabled={isLoading}
+                                title={i18n(Key.musicRefresh)}>
+                            {#if isLoading}
+                                <Icon icon="eos-icons:loading" class="text-lg" />
+                            {:else}
+                                <Icon icon="material-symbols:refresh" class="text-lg" />
+                            {/if}
+                        </button>
+                    {/if}
+                    <button class="btn-plain w-8 h-8 rounded-lg flex items-center justify-center" onclick={togglePlaylist}>
+                        <Icon icon="material-symbols:close" class="text-lg" />
+                    </button>
+                </div>
+            </div>
+            <div class="playlist-content overflow-y-auto max-h-80">
+                {#each playlist as song, index}
+                    <div class="playlist-item flex items-center gap-3 p-3 hover:bg-(--btn-plain-bg-hover) cursor-pointer transition-colors"
+                        class:bg-(--btn-plain-bg)={index === currentIndex}
+                        class:text-(--primary)={index === currentIndex}
+                        onclick={() => playSong(index)}
+                        onkeydown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault();
+                                playSong(index);
+                            }
+                        }}
+                        role="button"
+                        tabindex="0"
+                        aria-label="播放 {song.title} - {song.artist}">
+                        <div class="w-6 h-6 flex items-center justify-center">
+                            {#if index === currentIndex && isPlaying}
+                                <Icon icon="material-symbols:graphic-eq" class="text-(--primary) animate-pulse" />
+                            {:else if index === currentIndex}
+                                <Icon icon="material-symbols:pause" class="text-(--primary)" />
+                            {:else}
+                                <span class="text-sm text-(--content-meta)">{index + 1}</span>
+                            {/if}
+                        </div>
+                        <!-- 歌单列表内封面仍为圆角矩形 -->
+                        <div class="w-10 h-10 rounded-lg overflow-hidden shrink-0 shadow-sm">
+                            <img src={getAssetPath(song.cover)} alt={song.title} class="w-full h-full object-cover" />
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="font-medium truncate" class:text-(--primary)={index === currentIndex} class:text-90={index !== currentIndex}>
+                                {song.title}
+                            </div>
+                            <div class="text-sm text-(--content-meta) truncate" class:text-(--primary)={index === currentIndex}>
+                                {song.artist}
+                            </div>
+                        </div>
+                    </div>
+                {/each}
+            </div>
+        </div>
+    {/if}
     <!-- 折叠状态的小圆球 -->
-    <div class="orb-player w-12 h-12 bg-[var(--primary)] rounded-full shadow-lg cursor-pointer transition-all duration-500 ease-in-out flex items-center justify-center hover:scale-110 active:scale-95"
+    <div class="orb-player w-12 h-12 bg-(--primary) rounded-full shadow-lg cursor-pointer transition-all duration-500 ease-in-out flex items-center justify-center hover:scale-110 active:scale-95"
          class:opacity-0={!isCollapsed}
          class:scale-0={!isCollapsed}
+         class:pointer-events-auto={isCollapsed}
          class:pointer-events-none={!isCollapsed}
          onclick={toggleCollapse}
          onkeydown={(e) => {
@@ -597,12 +756,13 @@ onDestroy(() => {
         {/if}
     </div>
     <!-- 展开状态的完整播放器（封面圆形） -->
-    <div class="expanded-player card-base bg-[var(--float-panel-bg)] shadow-xl rounded-2xl p-4 transition-all duration-500 ease-in-out"
+    <div class="expanded-player card-base bg-(--float-panel-bg) shadow-xl rounded-2xl p-4 transition-all duration-500 ease-in-out"
          class:opacity-0={isCollapsed}
          class:scale-95={isCollapsed}
+         class:pointer-events-auto={!isCollapsed}
          class:pointer-events-none={isCollapsed}>
         <div class="flex items-center gap-4 mb-4">
-            <div class="cover-container relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+            <div class="cover-container relative w-16 h-16 rounded-full overflow-hidden shrink-0">
                 <img src={getAssetPath(currentSong.cover)} alt="封面"
                      class="w-full h-full object-cover transition-transform duration-300"
                      class:spinning={isPlaying && !isLoading}
@@ -622,15 +782,47 @@ onDestroy(() => {
                     <Icon icon={mode === "meting" ? "material-symbols:cloud" : "material-symbols:folder"} class="text-lg" />
                 </button>
                 <button class="btn-plain w-8 h-8 rounded-lg flex items-center justify-center"
-                        class:text-[var(--primary)]={showPlaylist}
+                        class:text-(--primary)={showPlaylist}
                         onclick={togglePlaylist}
                         title={i18n(Key.playlist)}>
                     <Icon icon="material-symbols:queue-music" class="text-lg" />
                 </button>
             </div>
         </div>
+        {#if showLyrics}
+        <div class="lyrics-section mb-2 px-1" transition:slide={{ duration: 300 }}>
+            <div class="lyrics-container h-[88px] overflow-y-auto overflow-x-hidden relative text-center scroll-smooth"
+                 bind:this={lrcContainer}
+                 onscroll={handleLrcScroll}>
+                {#if noLyrics}
+                    <div class="h-full flex items-center justify-center text-sm text-30">
+                        暂无歌词
+                    </div>
+                {:else if lyrics.length === 0}
+                     <div class="h-full flex items-center justify-center text-sm text-30">
+                        加载歌词中...
+                    </div>
+                {:else}
+                    <div class="py-8">
+                        {#each lyrics as line, index}
+                            <button class="lyric-line w-full block text-sm py-1 transition-all duration-300 cursor-pointer hover:opacity-100 bg-transparent border-none p-0 focus:outline-none"
+                               onclick={() => seekToLyric(line.time)}
+                               class:text-(--primary)={index === currentLrcIndex}
+                               class:font-bold={index === currentLrcIndex}
+                               class:scale-105={index === currentLrcIndex}
+                               class:text-50={index !== currentLrcIndex}
+                               class:opacity-60={index !== currentLrcIndex}
+                               title="跳转至此句">
+                                {line.text}
+                            </button>
+                        {/each}
+                    </div>
+                {/if}
+            </div>
+        </div>
+        {/if}
         <div class="progress-section mb-4">
-            <div class="progress-bar flex-1 h-2 bg-[var(--btn-regular-bg)] rounded-full cursor-pointer"
+            <div class="progress-bar flex-1 h-2 bg-(--btn-regular-bg) rounded-full cursor-pointer"
                 bind:this={progressBar}
                 onclick={setProgress}
                 onkeydown={(e) => {
@@ -653,19 +845,23 @@ onDestroy(() => {
                 aria-valuemin="0"
                 aria-valuemax="100"
                 aria-valuenow={duration > 0 ? (currentTime / duration * 100) : 0}>
-                <div class="h-full bg-[var(--primary)] rounded-full transition-all duration-100"
+                <div class="h-full bg-(--primary) rounded-full transition-all duration-100"
                     style="width: {duration > 0 ? (currentTime / duration) * 100 : 0}%">
                 </div>
             </div>
         </div>
         <div class="controls flex items-center justify-center gap-2 mb-4">
-            <!-- 随机按钮高亮 -->
-            <button class="w-10 h-10 rounded-lg"
-                    class:btn-regular={isShuffled}
-                    class:btn-plain={!isShuffled}
-                    onclick={toggleShuffle}
-                    disabled={playlist.length <= 1}>
-                <Icon icon="material-symbols:shuffle" class="text-lg" />
+            <!-- 播放模式切换按钮 -->
+            <button class="w-10 h-10 rounded-lg btn-plain"
+                    onclick={togglePlaybackMode}
+                    title={isRepeating === 1 ? i18n(Key.musicRepeatOne) : (isShuffled ? i18n(Key.musicShuffle) : i18n(Key.musicRepeatAll))}>
+                {#if isRepeating === 1}
+                    <Icon icon="material-symbols:repeat-one" class="text-lg" />
+                {:else if isShuffled}
+                    <Icon icon="material-symbols:shuffle" class="text-lg" />
+                {:else}
+                    <Icon icon="material-symbols:repeat" class="text-lg" />
+                {/if}
             </button>
             <button class="btn-plain w-10 h-10 rounded-lg" onclick={previousSong}
                     disabled={playlist.length <= 1}>
@@ -687,18 +883,11 @@ onDestroy(() => {
                     disabled={playlist.length <= 1}>
                 <Icon icon="material-symbols:skip-next" class="text-xl" />
             </button>
-            <!-- 循环按钮高亮 -->
-            <button class="w-10 h-10 rounded-lg"
-                    class:btn-regular={isRepeating > 0}
-                    class:btn-plain={isRepeating === 0}
-                    onclick={toggleRepeat}>
-                {#if isRepeating === 1}
-                    <Icon icon="material-symbols:repeat-one" class="text-lg" />
-                {:else if isRepeating === 2}
-                    <Icon icon="material-symbols:repeat" class="text-lg" />
-                {:else}
-                    <Icon icon="material-symbols:repeat" class="text-lg opacity-50" />
-                {/if}
+            <!-- 歌词显示切换按钮 -->
+            <button class="w-10 h-10 rounded-lg btn-plain"
+                    onclick={toggleLyrics}
+                    title="切换歌词显示">
+                <Icon icon="material-symbols:lyrics" class="text-lg {showLyrics ? 'text-(--primary)' : 'opacity-90'}" />
             </button>
         </div>
         <div class="bottom-controls flex items-center gap-2">
@@ -711,7 +900,7 @@ onDestroy(() => {
                     <Icon icon="material-symbols:volume-up" class="text-lg" />
                 {/if}
             </button>
-            <div class="flex-1 h-2 bg-[var(--btn-regular-bg)] rounded-full cursor-pointer"
+            <div class="flex-1 h-2 bg-(--btn-regular-bg) rounded-full cursor-pointer"
                 bind:this={volumeBar}
                 onmousedown={startVolumeDrag}
                 onkeydown={(e) => {
@@ -726,7 +915,7 @@ onDestroy(() => {
                 aria-valuemin="0"
                 aria-valuemax="100"
                 aria-valuenow={volume * 100}>
-                <div class="h-full bg-[var(--primary)] rounded-full transition-all"
+                <div class="h-full bg-(--primary) rounded-full transition-all"
                     class:duration-100={!isVolumeDragging}
                     class:duration-0={isVolumeDragging}
                     style="width: {volume * 100}%">
@@ -739,56 +928,6 @@ onDestroy(() => {
             </button>
         </div>
     </div>
-    {#if showPlaylist}
-        <div class="playlist-panel float-panel fixed bottom-20 right-4 w-80 max-h-96 overflow-hidden z-50"
-             transition:slide={{ duration: 300, axis: 'y' }}>
-            <div class="playlist-header flex items-center justify-between p-4 border-b border-[var(--line-divider)]">
-                <h3 class="text-lg font-semibold text-90">{i18n(Key.playlist)}</h3>
-                <button class="btn-plain w-8 h-8 rounded-lg" onclick={togglePlaylist}>
-                    <Icon icon="material-symbols:close" class="text-lg" />
-                </button>
-            </div>
-            <div class="playlist-content overflow-y-auto max-h-80">
-                {#each playlist as song, index}
-                    <div class="playlist-item flex items-center gap-3 p-3 hover:bg-[var(--btn-plain-bg-hover)] cursor-pointer transition-colors"
-                         class:bg-[var(--btn-plain-bg)]={index === currentIndex}
-                         class:text-[var(--primary)]={index === currentIndex}
-                         onclick={() => playSong(index)}
-                         onkeydown={(e) => {
-                             if (e.key === 'Enter' || e.key === ' ') {
-                                 e.preventDefault();
-                                 playSong(index);
-                             }
-                         }}
-                         role="button"
-                         tabindex="0"
-                         aria-label="播放 {song.title} - {song.artist}">
-                        <div class="w-6 h-6 flex items-center justify-center">
-                            {#if index === currentIndex && isPlaying}
-                                <Icon icon="material-symbols:graphic-eq" class="text-[var(--primary)] animate-pulse" />
-                            {:else if index === currentIndex}
-                                <Icon icon="material-symbols:pause" class="text-[var(--primary)]" />
-                            {:else}
-                                <span class="text-sm text-[var(--content-meta)]">{index + 1}</span>
-                            {/if}
-                        </div>
-                        <!-- 歌单列表内封面仍为圆角矩形 -->
-                        <div class="w-10 h-10 rounded-lg overflow-hidden bg-[var(--btn-regular-bg)] flex-shrink-0">
-                            <img src={getAssetPath(song.cover)} alt={song.title} class="w-full h-full object-cover" />
-                        </div>
-                        <div class="flex-1 min-w-0">
-                            <div class="font-medium truncate" class:text-[var(--primary)]={index === currentIndex} class:text-90={index !== currentIndex}>
-                                {song.title}
-                            </div>
-                            <div class="text-sm text-[var(--content-meta)] truncate" class:text-[var(--primary)]={index === currentIndex}>
-                                {song.artist}
-                            </div>
-                        </div>
-                    </div>
-                {/each}
-            </div>
-        </div>
-    {/if}
 </div>
 
 {/if}

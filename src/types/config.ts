@@ -6,7 +6,23 @@ import type {
     WALLPAPER_BANNER,
     WALLPAPER_NONE
 } from "@constants/constants";
+import type { SupportedLanguage } from "@i18n/language";
 
+
+/**
+ * 
+ */
+
+// Analytics 配置
+export type AnalyticsConfig = {
+    enabled: boolean;
+    platform: "umami";
+    umami: {
+        apiKey: string;
+        baseUrl: string;
+        code: string;
+    };
+};
 
 /**
  * 
@@ -24,6 +40,8 @@ export type Favicon = {
 export type LoadingOverlayConfig = {
     // 是否启用加载页
     enable: boolean;
+    // 是否等待所有资源加载完成; 若设置为 false，则会在 DOM 解析完成后立即关闭加载页
+    waitForAllResources: boolean;
     // 加载标题配置
     title: {
         // 是否启用加载标题
@@ -54,7 +72,7 @@ export type SiteConfig = {
     // 站点关键词，用于生成 <meta name="keywords">
     keywords?: string[];
     // 语言配置
-    lang: "zh" | "en" | "ko" | "ja" | "es" | "th" | "vi" | "tr" | "id" | "fr" | "de" | "ru" | "ar";
+    lang: SupportedLanguage;
     // 翻译配置
     translate?: {
         // 启用翻译功能
@@ -242,6 +260,7 @@ export type NavbarConfig = {
 export type WidgetComponentType =
     | "profile"
     | "announcement"
+    | "directory"
     | "categories"
     | "tags"
     | "statistics"
@@ -258,6 +277,13 @@ export type WidgetComponentConfig = {
     position: "top" | "sticky"; // 顶部固定区域或粘性区域
     // 自定义内联样式
     style?: string;
+    // 页面可见性配置
+    visibility?: {
+        // 匹配模式：'include' (包含), 'exclude' (排除)
+        mode: "include" | "exclude";
+        // 页面路径匹配规则列表 (支持正则字符串)
+        paths: string[];
+    };
     // 响应式配置
     responsive?: {
         // 在指定设备上隐藏
@@ -265,8 +291,8 @@ export type WidgetComponentConfig = {
         // 折叠阈值
         collapseThreshold?: number;
     };
-    // 自定义属性
-    customProps?: Record<string, any>;
+    // 目录深度 (仅用于 toc 和 categories 组件)
+    depth?: number;
 };
 
 
@@ -326,29 +352,30 @@ export type SidebarConfig = {
  * 
  */
 
-export type BlogPostData = {
-    body: string;
-    title: string;
-    published: Date;
-    description: string;
-    tags: string[];
-    draft?: boolean;
-    image?: string;
-    category?: string;
-    pinned?: boolean;
-    prevTitle?: string;
-    prevSlug?: string;
-    nextTitle?: string;
-    nextSlug?: string;
-};
 
+// 评论服务提供商
+export type CommentProvider = "waline" |"twikoo";
 
 // 文章配置
 export type PostConfig = {
-    // 显示“上次编辑”卡片
+    // 文章卡片配置
+    card: {
+        // 封面配置
+        cover: {
+            // 封面位置 ("left" | "right")
+            side: "left" | "right";
+            // 封面宽度
+            width: string;
+            // 封面上是否显示文字 (标题、标签、摘要)
+            showContent: boolean;
+            // 无指定封面时是否显示默认封面
+            showDefaultCover: boolean;
+        };
+        // 标题大小 (Tailwind 文本大小类，例如 "text-3xl")
+        titleSize: string;
+    };
+    // 显示"上次编辑"卡片
     showLastModified: boolean;
-    // 在文章内容中显示封面
-    showCoverInContent: boolean;
     // 代码高亮配置
     expressiveCode: {
         // 主题
@@ -367,6 +394,21 @@ export type PostConfig = {
     comment: {
         // 启用评论功能
         enable: boolean;
+        // 评论服务提供商（不指定时自动检测已配置的服务）
+        provider?: CommentProvider;
+        // Waline 评论系统配置
+        waline?: {
+            // 服务端地址
+            serverURL: string;
+            // 语言
+            lang?: string;
+            // 每页评论数
+            pageSize?: number;
+            // 是否启用表情反应
+            reaction?: boolean | string[];
+            // 必填项
+            requiredMeta?: ("nick" | "mail" | "link")[];
+        };
         // Twikoo 评论系统配置
         twikoo?: {
             // 环境 ID
@@ -457,6 +499,8 @@ export type MusicPlayerTrack = {
     cover: string;
     // 路径
     url: string;
+    // 歌词
+    lrc?: string;
     // 时长
     duration: number;
 };

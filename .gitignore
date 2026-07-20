@@ -1,22 +1,18 @@
-# editor config
-**/.vscode/
-.vs/
-
-# dependencies
-node_modules/
-
-# generated types
-.astro/
-.vercel/
 
 # build output
-dist/
-
+# dependencies
+# editor config
+# generated types
 # logs
+# private config
+**/.vscode/
+.astro/
+.env
+.vercel/
+.vs/
+dist/
+node_modules/
 npm-debug.log*
+pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-
-# private config
-.env
