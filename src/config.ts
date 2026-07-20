@@ -80,7 +80,7 @@ const resolvedPostConfig: PostConfig = {
     card: config.post.card ?? {
         cover: {
             side: "right",
-            width: "28%",
+            width: "35%",
             showContent: false,
             showDefaultCover: false,
         },

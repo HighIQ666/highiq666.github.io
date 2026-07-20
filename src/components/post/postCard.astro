@@ -88,7 +88,7 @@ const defaultCoverGradient = "linear-gradient(135deg, color-mix(in oklch, oklch(
     {renderCoverArea && (
         <a href={url} aria-label={title} class:list={["group",
                 "max-h-[20vh] h-[20vh] @min-[768px]:max-h-none @min-[768px]:h-auto mx-4 mt-4 -mb-2 @min-[768px]:mb-0 @min-[768px]:mx-0 @min-[768px]:mt-0",
-                "@min-[768px]:w-(--coverWidth) relative @min-[768px]:absolute @min-[768px]:top-3 @min-[768px]:bottom-3 @min-[768px]:right-3 rounded-xl overflow-hidden active:scale-95",
+                "@min-[768px]:w-(--coverWidth) @min-[768px]:aspect-square @min-[768px]:-translate-y-1/2 relative @min-[768px]:absolute @min-[768px]:top-1/2 @min-[768px]:right-3 rounded-xl overflow-hidden active:scale-95",
                 {"@min-[768px]:right-3": isCoverOnRight, "@min-[768px]:left-3": !isCoverOnRight}
             ]}
         >
