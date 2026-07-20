@@ -54,14 +54,14 @@ const imageBaseDir = getFileDirFromPath(entry.filePath || "");
 const defaultCoverGradient = "linear-gradient(135deg, color-mix(in oklch, oklch(from var(--primary) l c calc(h - 30)) 51%, transparent) 0%, color-mix(in oklch, var(--primary) 51%, transparent) 50%, color-mix(in oklch, oklch(from var(--primary) l c calc(h + 30)) 51%, transparent) 100%)";
 ---
 
-<div class:list={["card-base flex flex-col-reverse @min-[768px]:flex-col w-full rounded-(--radius-large) overflow-hidden relative @container", className]} style={style}>
+<div class:list={["card-base flex flex-col-reverse @min-[768px]:flex-col w-full py-6 rounded-(--radius-large) overflow-hidden relative @container", className]} style={style}>
     <div class:list={["pl-6 @min-[768px]:pl-9 pr-6 @min-[768px]:pr-2 pt-6 @min-[768px]:pt-7 pb-6 relative", 
         {"w-full @min-[768px]:w-[calc(100%-var(--coverWidth)-var(--coverGap))]": isCoverOnRight && renderCoverArea,
          "ml-0 @min-[768px]:ml-[calc(var(--coverWidth)+var(--coverGap))]": !isCoverOnRight && renderCoverArea}
     ]}>
         <a href={url}
             class:list={["transition group w-full block font-bold mb-3 text-90 hover:text-(--primary) dark:hover:text-(--primary) active:text-(--title-active) dark:active:text-(--title-active) before:w-1 before:h-5 before:rounded-md before:bg-(--primary) before:absolute before:top-[35px] before:left-[18px] before:hidden @min-[768px]:before:block",
-                titleSize
+                "text-4xl"
             ]}
         >
             {pinned && <Icon name="mdi:pin" class="inline text-(--primary) text-2xl mr-2 -translate-y-0.5"></Icon>}
@@ -92,7 +92,7 @@ const defaultCoverGradient = "linear-gradient(135deg, color-mix(in oklch, oklch(
                 {"@min-[768px]:right-3": isCoverOnRight, "@min-[768px]:left-3": !isCoverOnRight}
             ]}
         >
-            <div class="absolute pointer-events-none z-10 w-full h-full group-hover:bg-black/30 group-active:bg-black/50 transition"></div>
+            <div class="absolute pointer-events-none z-10 inset-0 origin-left bg-black/40 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out rounded-xl"></div>
             <div class="absolute pointer-events-none z-20 w-full h-full flex items-center justify-center ">
                 <Icon name="material-symbols:chevron-right-rounded"
                     class="transition opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-100 text-white text-5xl">
