@@ -2,6 +2,7 @@ import yaml from "js-yaml";
 
 import type {
     SiteConfig,
+    AnalyticsConfig,
     NavbarLink,
     NavbarConfig,
     SidebarConfig,
@@ -19,7 +20,8 @@ import rawConfig from "../twilight.config.yaml?raw";
 
 type ConfigFile = {
     site: SiteConfig;
-    umami: {
+    analytics?: AnalyticsConfig;
+    umami?: {
         enabled: boolean;
         apiKey?: string;
         baseUrl: string;
@@ -75,26 +77,55 @@ const normalizeNavbarLinks = (links: Array<NavbarLink | LinkPreset | string>) =>
 
 const resolvedPostConfig: PostConfig = {
     ...config.post,
-    comment: config.post.comment.twikoo
-        ? {
-            ...config.post.comment,
-            twikoo: {
+    card: config.post.card ?? {
+        cover: {
+            side: "right",
+            width: "35%",
+            showContent: false,
+            showDefaultCover: false,
+        },
+        titleSize: "text-4xl",
+    },
+    comment: {
+        ...config.post.comment,
+        provider: config.post.comment.provider
+            ?? (config.post.comment.waline ? "waline" : undefined)
+            ?? (config.post.comment.twikoo ? "twikoo" : undefined),
+        waline: config.post.comment.waline
+            ? {
+                ...config.post.comment.waline,
+                lang: config.post.comment.waline.lang ?? config.site.lang,
+            }
+            : undefined,
+        twikoo: config.post.comment.twikoo
+            ? {
                 ...config.post.comment.twikoo,
                 lang: config.post.comment.twikoo.lang ?? config.site.lang,
-            },
-        }
-        : config.post.comment,
+            }
+            : undefined,
+    },
 };
 
 // 站点配置
 export const siteConfig: SiteConfig = config.site;
 
-// Umami统计配置
+// 统计配置（兼容旧的 umami 字段名）
+export const analyticsConfig: AnalyticsConfig = config.analytics ?? {
+    enabled: config.umami?.enabled ?? false,
+    platform: "umami",
+    umami: {
+        apiKey: config.umami?.apiKey ?? import.meta.env.UMAMI_API_KEY,
+        baseUrl: config.umami?.baseUrl ?? "https://api.umami.is",
+        code: config.umami?.scripts ?? import.meta.env.UMAMI_TRACKING_CODE,
+    },
+};
+
+// Umami 统计配置（兼容旧版导入）
 export const umamiConfig = {
-    enabled: config.umami.enabled,
-    apiKey: import.meta.env.UMAMI_API_KEY ?? config.umami.apiKey,
-    baseUrl: config.umami.baseUrl,
-    scripts: import.meta.env.UMAMI_TRACKING_CODE ?? config.umami.scripts,
+    enabled: analyticsConfig.enabled,
+    apiKey: analyticsConfig.umami.apiKey,
+    baseUrl: analyticsConfig.umami.baseUrl,
+    scripts: analyticsConfig.umami.code,
 } as const;
 
 // 导航栏配置

@@ -1,4 +1,4 @@
-import { NAVBAR_HEIGHT } from "@constants/constants";
+import { NAVBAR_HEIGHT, NAVBAR_GAP } from "@constants/constants";
 import { widgetManager } from "@utils/widget";
 
 
@@ -141,7 +141,8 @@ export class TableOfContents extends HTMLElement {
             const targetElement = document.getElementById(id);
             if (targetElement) {
                 const navbarHeight = parseInt(this.dataset.navbarHeight || NAVBAR_HEIGHT.toString());
-                const targetTop = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight;
+                const gap = NAVBAR_GAP * 16; // Convert rem to px
+                const targetTop = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight - gap;
                 window.scrollTo({
                     top: targetTop,
                     behavior: "smooth"
@@ -250,10 +251,10 @@ export class TableOfContents extends HTMLElement {
                 const depthClass = heading.depth === minDepth ? '' :
                     heading.depth === minDepth + 1 ? 'ml-4' : 'ml-8';
                 const badgeContent = heading.depth === minDepth ? (heading1Count++) :
-                    heading.depth === minDepth + 1 ? '<div class="transition w-2 h-2 rounded-[0.1875rem] bg-[var(--toc-badge-bg)]"></div>' :
-                    '<div class="transition w-1.5 h-1.5 rounded-sm bg-black/5 dark:bg-white/10"></div>';
-                return `<a href="#${heading.slug}" class="px-2 flex gap-2 relative transition w-full min-h-9 rounded-xl hover:bg-[var(--toc-btn-hover)] active:bg-[var(--toc-btn-active)] py-2">
-                    <div class="transition w-5 h-5 shrink-0 rounded-lg text-xs flex items-center justify-center font-bold ${depthClass} ${heading.depth === minDepth ? 'bg-[var(--toc-badge-bg)] text-[var(--btn-content)]' : ''}">
+                    heading.depth === minDepth + 1 ? '<div class="transition w-2 h-2 rounded-[0.1875rem] bg-(--toc-badge-bg)"></div>' :
+                    '<div class="transition w-1.5 h-1.5 rounded-xs bg-black/5 dark:bg-white/10"></div>';
+                return `<a href="#${heading.slug}" class="px-2 flex gap-2 relative transition w-full min-h-9 rounded-xl hover:bg-(--toc-btn-hover) active:bg-(--toc-btn-active) py-2">
+                    <div class="transition w-5 h-5 shrink-0 rounded-lg text-xs flex items-center justify-center font-bold ${depthClass} ${heading.depth === minDepth ? 'bg-(--toc-badge-bg) text-(--btn-content)' : ''}">
                         ${badgeContent}
                     </div>
                     <div class="transition text-sm ${heading.depth <= minDepth + 1 ? 'text-50' : 'text-30'}">${heading.text}</div>
@@ -262,7 +263,7 @@ export class TableOfContents extends HTMLElement {
 
         const innerContent = this.querySelector('.toc-inner-content');
         if (innerContent) {
-            innerContent.innerHTML = tocHTML + '<div class="active-indicator -z-10 absolute left-0 right-0 rounded-xl transition-all pointer-events-none bg-[var(--toc-btn-hover)]" style="opacity: 0"></div>';
+            innerContent.innerHTML = tocHTML + '<div class="active-indicator -z-10 absolute left-0 right-0 rounded-xl transition-all pointer-events-none bg-(--toc-btn-hover)" style="opacity: 0"></div>';
         }
         return true;
     }

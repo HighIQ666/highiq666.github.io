@@ -1,11 +1,16 @@
+<script context="module" lang="ts">
+    let isGlobalInitialized = false;
+    let cachedEcharts: any = null;
+</script>
+
 <script lang="ts">
     import { onMount } from 'svelte';
-    import Icon from "@iconify/svelte";
     import dayjs from 'dayjs';
 
     import { BREAKPOINT_LG } from "@constants/breakpoints";
     import { i18n } from "@i18n/translation";
     import I18nKey from "@i18n/i18nKey";
+    import Icon from "@components/common/icon.svelte";
 
 
     let {
@@ -43,8 +48,12 @@
     let heatmapChart: any = $state();
     let categoriesChart: any = $state();
     let tagsChart: any = $state();
+    let isHeatmapLoading = $state(!isGlobalInitialized);
+    let isCategoriesLoading = $state(!isGlobalInitialized);
+    let isTagsLoading = $state(!isGlobalInitialized);
 
     let timeScale: 'year' | 'month' | 'day' = $state('year');
+    let lastScale = $state<'year' | 'month' | 'day'>('year');
     let isDark = $state(false);
     let isDesktop = $state(true);
 
@@ -77,6 +86,11 @@
         if (typeof window === 'undefined') return;
         isDark = document.documentElement.classList.contains('dark');
 
+        if (cachedEcharts) {
+            echarts = cachedEcharts;
+            return;
+        }
+
         // 动态导入 ECharts 及其组件，启用 Tree Shaking
         const echartsCore = await import('echarts/core');
         const { LineChart, RadarChart } = await import('echarts/charts');
@@ -100,19 +114,29 @@
         ]);
 
         echarts = echartsCore;
+        cachedEcharts = echartsCore;
     };
 
     let isInitialized = $state(false);
 
-    const initCharts = () => {
+    const initCharts = async () => {
         if (isInitialized) return;
-        initActivityChart();
-        if (isDesktop) initRadarCharts();
         isInitialized = true;
+        // 依次初始化图表
+        await initActivityChart();
+        if (isDesktop) {
+            await initCategoriesChart();
+            await initTagsChart();
+        }
+        isGlobalInitialized = true;
     };
 
-    const initActivityChart = (isUpdate = false) => {
+    const initActivityChart = async (isUpdate = false) => {
         if (!heatmapContainer || !echarts) return;
+        if (!isUpdate && !isGlobalInitialized) isHeatmapLoading = true;
+
+        // 模拟加载延迟以测试效果
+        //if (!isUpdate) await new Promise(resolve => setTimeout(resolve, 300));
 
         // 尝试获取现有实例以支持 Swup 持久化
         const existingChart = echarts.getInstanceByDom(heatmapContainer);
@@ -167,7 +191,7 @@
         const option = {
             backgroundColor: 'transparent',
             textStyle: { fontFamily },
-            animation: isNew || isUpdate,
+            animation: (isNew && !isGlobalInitialized) || isUpdate,
             animationDuration: isNew ? 2000 : 500,
             animationEasing: 'cubicOut',
             title: {
@@ -212,111 +236,125 @@
         };
 
         heatmapChart.setOption(option);
+        if (!isUpdate) isHeatmapLoading = false;
     };
 
-    const initRadarCharts = () => {
-        if (!echarts) return;
+    const initCategoriesChart = async (isUpdate = false) => {
+        if (!categoriesContainer || !echarts) return;
+        if (!isUpdate && !isGlobalInitialized) isCategoriesLoading = true;
+        if (!isUpdate && !isGlobalInitialized) await new Promise(resolve => setTimeout(resolve, 300));
+
         const colors = getThemeColors();
         const fontFamily = getChartsFontFamily();
 
-        // Categories Radar
-        if (categoriesContainer) {
-            const existingCategoriesChart = echarts.getInstanceByDom(categoriesContainer);
-            if (existingCategoriesChart) {
-                categoriesChart = existingCategoriesChart;
-            } else {
-                categoriesChart = echarts.init(categoriesContainer, isDark ? 'dark' : null, { renderer: 'svg' });
-            }
-
-            const indicator = categories.map(c => ({ name: c.name, max: Math.max(...categories.map(x => x.count), 5) }));
-            const data = categories.map(c => c.count);
-
-            categoriesChart.setOption({
-                backgroundColor: 'transparent',
-                textStyle: { fontFamily },
-                animation: true,
-                animationDuration: 2000,
-                animationEasing: 'exponentialOut',
-                tooltip: {
-                    show: true,
-                    trigger: 'item',
-                    confine: true
-                },
-                title: {
-                    text: labels.categories,
-                    left: 'left',
-                    textStyle: { fontFamily, fontSize: 14, color: colors.text, fontWeight: 'bold' }
-                },
-                radar: {
-                    indicator: indicator,
-                    radius: '60%',
-                    center: ['50%', '60%'],
-                    axisName: { fontFamily, color: colors.text, fontSize: 10 },
-                    splitLine: { lineStyle: { color: colors.grid } },
-                    splitArea: { show: false }
-                },
-                series: [{
-                    type: 'radar',
-                    data: [{ value: data, name: labels.categories }],
-                    areaStyle: { color: 'rgba(255, 123, 0, 0.6)' },
-                    lineStyle: { color: 'rgba(255, 123, 0, 0.9)' },
-                    itemStyle: { color: 'rgba(255, 123, 0, 0.9)' },
-                    emphasis: {
-                        areaStyle: { color: 'rgba(255, 123, 0, 0.9)' }
-                    }
-                }]
-            });
+        const existingCategoriesChart = echarts.getInstanceByDom(categoriesContainer);
+        if (existingCategoriesChart) {
+            categoriesChart = existingCategoriesChart;
+        } else {
+            categoriesChart = echarts.init(categoriesContainer, isDark ? 'dark' : null, { renderer: 'svg' });
         }
 
-        // Tags Radar
-        if (tagsContainer) {
-            const existingTagsChart = echarts.getInstanceByDom(tagsContainer);
-            if (existingTagsChart) {
-                tagsChart = existingTagsChart;
-            } else {
-                tagsChart = echarts.init(tagsContainer, isDark ? 'dark' : null, { renderer: 'svg' });
-            }
+        const indicator = categories.map(c => ({ name: c.name, max: Math.max(...categories.map(x => x.count), 5) }));
+        const data = categories.map(c => c.count);
 
-            const sortedTags = [...tags].sort((a, b) => b.count - a.count).slice(0, 8);
-            const indicator = sortedTags.map(t => ({ name: t.name, max: Math.max(...sortedTags.map(x => x.count), 5) }));
-            const data = sortedTags.map(t => t.count);
+        categoriesChart.setOption({
+            backgroundColor: 'transparent',
+            textStyle: { fontFamily },
+            animation: !isGlobalInitialized || isUpdate,
+            animationDuration: 2000,
+            animationEasing: 'exponentialOut',
+            tooltip: {
+                show: true,
+                trigger: 'item',
+                confine: true
+            },
+            title: {
+                text: labels.categories,
+                left: 'left',
+                textStyle: { fontFamily, fontSize: 14, color: colors.text, fontWeight: 'bold' }
+            },
+            radar: {
+                indicator: indicator,
+                radius: '60%',
+                center: ['50%', '60%'],
+                axisName: { fontFamily, color: colors.text, fontSize: 10 },
+                splitLine: { lineStyle: { color: colors.grid } },
+                splitArea: { show: false }
+            },
+            series: [{
+                type: 'radar',
+                data: [{ value: data, name: labels.categories }],
+                areaStyle: { color: 'rgba(255, 123, 0, 0.6)' },
+                lineStyle: { color: 'rgba(255, 123, 0, 0.9)' },
+                itemStyle: { color: 'rgba(255, 123, 0, 0.9)' },
+                emphasis: {
+                    areaStyle: { color: 'rgba(255, 123, 0, 0.9)' }
+                }
+            }]
+        });
+        if (!isUpdate) isCategoriesLoading = false;
+    };
 
-            tagsChart.setOption({
-                backgroundColor: 'transparent',
-                textStyle: { fontFamily },
-                animation: true,
-                animationDuration: 2000,
-                animationEasing: 'exponentialOut',
-                tooltip: {
-                    show: true,
-                    trigger: 'item',
-                    confine: true
-                },
-                title: {
-                    text: labels.tags,
-                    left: 'left',
-                    textStyle: { fontFamily, fontSize: 14, color: colors.text, fontWeight: 'bold' }
-                },
-                radar: {
-                    indicator: indicator,
-                    radius: '60%',
-                    center: ['50%', '60%'],
-                    axisName: { fontFamily, color: colors.text, fontSize: 10 },
-                    splitLine: { lineStyle: { color: colors.grid } },
-                    splitArea: { show: false }
-                },
-                series: [{
-                    type: 'radar',
-                    data: [{ value: data, name: labels.tags }],
-                    areaStyle: { color: 'rgba(16, 185, 129, 0.6)' },
-                    lineStyle: { color: 'rgba(16, 185, 129, 0.9)' },
-                    itemStyle: { color: 'rgba(16, 185, 129, 0.9)' },
-                    emphasis: {
-                        areaStyle: { color: 'rgba(16, 185, 129, 0.9)' }
-                    }
-                }]
-            });
+    const initTagsChart = async (isUpdate = false) => {
+        if (!tagsContainer || !echarts) return;
+        if (!isUpdate && !isGlobalInitialized) isTagsLoading = true;
+        if (!isUpdate && !isGlobalInitialized) await new Promise(resolve => setTimeout(resolve, 300));
+
+        const colors = getThemeColors();
+        const fontFamily = getChartsFontFamily();
+
+        const existingTagsChart = echarts.getInstanceByDom(tagsContainer);
+        if (existingTagsChart) {
+            tagsChart = existingTagsChart;
+        } else {
+            tagsChart = echarts.init(tagsContainer, isDark ? 'dark' : null, { renderer: 'svg' });
         }
+
+        const sortedTags = [...tags].sort((a, b) => b.count - a.count).slice(0, 8);
+        const indicator = sortedTags.map(t => ({ name: t.name, max: Math.max(...sortedTags.map(x => x.count), 5) }));
+        const data = sortedTags.map(t => t.count);
+
+        tagsChart.setOption({
+            backgroundColor: 'transparent',
+            textStyle: { fontFamily },
+            animation: !isGlobalInitialized || isUpdate,
+            animationDuration: 2000,
+            animationEasing: 'exponentialOut',
+            tooltip: {
+                show: true,
+                trigger: 'item',
+                confine: true
+            },
+            title: {
+                text: labels.tags,
+                left: 'left',
+                textStyle: { fontFamily, fontSize: 14, color: colors.text, fontWeight: 'bold' }
+            },
+            radar: {
+                indicator: indicator,
+                radius: '60%',
+                center: ['50%', '60%'],
+                axisName: { fontFamily, color: colors.text, fontSize: 10 },
+                splitLine: { lineStyle: { color: colors.grid } },
+                splitArea: { show: false }
+            },
+            series: [{
+                type: 'radar',
+                data: [{ value: data, name: labels.tags }],
+                areaStyle: { color: 'rgba(16, 185, 129, 0.6)' },
+                lineStyle: { color: 'rgba(16, 185, 129, 0.9)' },
+                itemStyle: { color: 'rgba(16, 185, 129, 0.9)' },
+                emphasis: {
+                    areaStyle: { color: 'rgba(16, 185, 129, 0.9)' }
+                }
+            }]
+        });
+        if (!isUpdate) isTagsLoading = false;
+    };
+
+    const initRadarCharts = () => {
+        initCategoriesChart(true);
+        initTagsChart(true);
     };
 
     onMount(() => {
@@ -423,18 +461,28 @@
 
     $effect(() => {
         if (timeScale && echarts && isInitialized) {
-            initActivityChart(true);
+            if (timeScale !== lastScale) {
+                lastScale = timeScale;
+                initActivityChart(true);
+            }
         }
     });
 </script>
 
-<div id={`statistics-${side}`} bind:this={container} class={"pb-4 card-base " + className} {style}>
+<div id={`statistics-${side}`} data-swup-persist={`statistics-${side}`} bind:this={container} class={"pb-4 card-base " + className} {style}>
     <div class="font-bold transition text-lg text-neutral-900 dark:text-neutral-100 relative ml-8 mt-4 mb-2
-        before:w-1 before:h-4 before:rounded-md before:bg-[var(--primary)]
+        before:w-1 before:h-4 before:rounded-md before:bg-(--primary)
         before:absolute before:left-[-16px] before:top-[5.5px]">{labels.statistics}</div>
-    <div class="collapse-wrapper px-4 overflow-hidden">
+    <div class="px-4 overflow-hidden relative min-h-[180px]">
         <div class="stats-charts">
             <div class="chart-section heatmap-section">
+                {#if isHeatmapLoading}
+                    <div class="absolute inset-0 flex items-center justify-center z-10 bg-(--card-bg)/50 backdrop-blur-[1px]">
+                        <div class="text-(--primary) flex items-center justify-center">
+                            <Icon icon="material-symbols:progress-activity" class="animate-spin" style="font-size: 2.4rem;" />
+                        </div>
+                    </div>
+                {/if}
                 <div class="section-header">
                     <div class="dropdown-wrapper">
                         <button class="time-scale-select flex items-center gap-1">
@@ -450,16 +498,30 @@
                         </div>
                     </div>
                 </div>
-                <div bind:this={heatmapContainer} class="heatmap-container"></div>
+                <div bind:this={heatmapContainer} class="heatmap-container transition-opacity duration-600" class:opacity-0={isHeatmapLoading}></div>
             </div>
 
             {#if isDesktop}
                 <div class="chart-section radar-section">
-                    <div bind:this={categoriesContainer} class="radar-container"></div>
+                    {#if isCategoriesLoading}
+                        <div class="absolute inset-0 flex items-center justify-center z-10 bg-(--card-bg)/50 backdrop-blur-[1px]">
+                            <div class="text-(--primary) flex items-center justify-center">
+                                <Icon icon="material-symbols:progress-activity" class="animate-spin" style="font-size: 2.4rem;" />
+                            </div>
+                        </div>
+                    {/if}
+                    <div bind:this={categoriesContainer} class="radar-container transition-opacity duration-600" class:opacity-0={isCategoriesLoading}></div>
                 </div>
 
                 <div class="chart-section radar-section">
-                    <div bind:this={tagsContainer} class="radar-container"></div>
+                    {#if isTagsLoading}
+                        <div class="absolute inset-0 flex items-center justify-center z-10 bg-(--card-bg)/50 backdrop-blur-[1px]">
+                            <div class="text-(--primary) flex items-center justify-center">
+                                <Icon icon="material-symbols:progress-activity" class="animate-spin" style="font-size: 2.4rem;" />
+                            </div>
+                        </div>
+                    {/if}
+                    <div bind:this={tagsContainer} class="radar-container transition-opacity duration-600" class:opacity-0={isTagsLoading}></div>
                 </div>
             {/if}
         </div>
@@ -511,7 +573,7 @@
     .dropdown-wrapper:hover .dropdown-menu-custom {
         opacity: 1;
         visibility: visible;
-        transform: translateY(0);
+        translate: 0 0;
     }
     .dropdown-menu-custom {
         position: absolute;
@@ -524,7 +586,7 @@
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         opacity: 0;
         visibility: hidden;
-        transform: translateY(-10px);
+        translate: 0 -10px;
         transition: all 0.2s;
         z-index: 50;
         min-width: 80px;
@@ -552,10 +614,10 @@
     }
     .dropdown-icon {
         font-size: 0.9rem;
-        transition: transform 0.2s;
+        transition: rotate 0.2s;
     }
     .dropdown-wrapper:hover .dropdown-icon {
-        transform: rotate(180deg);
+        rotate: 180deg;
     }
     .heatmap-container {
         height: 180px;
