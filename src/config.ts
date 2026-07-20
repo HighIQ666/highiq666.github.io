@@ -80,11 +80,11 @@ const resolvedPostConfig: PostConfig = {
     card: config.post.card ?? {
         cover: {
             side: "right",
-            width: "45%",
+            width: "28%",
             showContent: false,
-            showDefaultCover: true,
+            showDefaultCover: false,
         },
-        titleSize: "text-2xl",
+        titleSize: "text-3xl",
     },
     comment: {
         ...config.post.comment,
