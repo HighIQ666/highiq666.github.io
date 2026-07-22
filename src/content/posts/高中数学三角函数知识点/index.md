@@ -366,22 +366,26 @@ $ A=\boldsymbol{\dfrac{\text{最大值}-\text{最小值}}{2}} $，$ B=\boldsymbo
 
 **法一（先平移后伸缩）**：
 $$
+\begin{gather*}
 y=\sin x \\
 \xrightarrow{\text{向左平移}\;\varphi\;\text{个单位长度}} y=\boldsymbol{\sin(x+\varphi)} \\
 \xrightarrow{\text{横坐标变为原来的}\;\frac{1}{\omega}\;\text{倍（纵坐标不变）}} y=\sin(\omega x+\varphi) \\
 \xrightarrow{\text{纵坐标变为原来的}\;A\;\text{倍（横坐标不变）}} y=A\sin(\omega x+\varphi) \\
 \xrightarrow{\text{上下平移}\;B\;\text{个单位长度（上加下减）}} y=A\sin(\omega x+\varphi)+B
+\end{gather*}
 $$
 :::note
 若 $\varphi<0$ ，则向右平移 $|\varphi|$ 个单位长度
 :::
 **法二（先伸缩后平移）**：
 $$
+\begin{gather*}
 y=\sin x \\
-\xrightarrow{\text{横坐标变为原来的}\;\frac{1}{\omega}\;\text{倍（纵坐标不变）}（\omega>0）} y=\sin\omega x \\
+\xrightarrow{\text{横坐标变为原来的}\;\frac{1}{\omega}\;\text{倍（纵坐标不变）（}\omega>0\text{）}} y=\sin\omega x \\
 \xrightarrow{\text{向左平移}\;\frac{\varphi}{\omega}\;\text{个单位长度}} y=\sin(\omega x+\varphi)=\boldsymbol{\sin\left[\omega\left(x+\frac{\varphi}{\omega}\right)\right]} \\
 \xrightarrow{\text{纵坐标变为原来的}\;A\;\text{倍（横坐标不变）}} y=A\sin(\omega x+\varphi) \\
 \xrightarrow{\text{上下平移}\;B\;\text{个单位长度（上加下减）}} y=A\sin(\omega x+\varphi)+B
+\end{gather*}
 $$
 :::note
 
@@ -390,11 +394,13 @@ $$
 - 或者可以采用下面这种变换法：
 
 $$
+\begin{gather*}
 y=\sin x \\
-\xrightarrow{\text{横坐标变为原来的}\;\frac{1}{\omega}\;\text{倍（纵坐标不变）}（\omega 符号任意）} y=\sin\omega x \\
+\xrightarrow{\text{横坐标变为原来的}\;\frac{1}{\omega}\;\text{倍（纵坐标不变）（}\omega \text{符号任意）}} y=\sin\omega x \\
 \xrightarrow{\text{向左（$\varphi>0$）/右（$\varphi<0$）平移}\;|\frac{\varphi}{\omega}|\;\text{个单位长度}} y=\sin(\omega x+\varphi)=\boldsymbol{\sin\left[\omega\left(x+\frac{\varphi}{\omega}\right)\right]} \\
 \xrightarrow{\text{纵坐标变为原来的}\;A\;\text{倍（横坐标不变）}} y=A\sin(\omega x+\varphi) \\
 \xrightarrow{\text{上下平移}\;B\;\text{个单位长度（上加下减）}} y=A\sin(\omega x+\varphi)+B
+\end{gather*}
 $$
 
 :::

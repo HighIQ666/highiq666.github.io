@@ -105,35 +105,35 @@ $$
 设$\{a_n\}$的公差为$d$，则
 
 $$
+\begin{align*}
 d>0 \Leftrightarrow \{a_n\}\text{为递增数列} \\
 d<0 \Leftrightarrow \{a_n\}\text{为递减数列} \\
 d=0 \Leftrightarrow \{a_n\}\text{为常数列}
+\end{align*}
 $$
 
 #### 等差数列结论
 
 1. 数列的通项$a_n$与前n项和$S_n$的关系
 
-$$
-a_n=
-\begin{cases}
-S_n\ (n=1)\\
-S_n-S_{n-1}\ (n\ge2)
-\end{cases}
-$$
+    $$
+    a_n=
+    \begin{cases}
+    S_n\ (n=1)\\
+    S_n-S_{n-1}\ (n\ge2)
+    \end{cases}
+    $$
 
-（数列$\{a_n\}$的前n项和为$S_n=a_1+a_2+\dots+a_n$）
+    （数列$\{a_n\}$的前n项和为$S_n=a_1+a_2+\dots+a_n$）
 
-已知$S_n$与$a_n$（或$S_n$与$n$）的关系，求$a_n$
+    已知$S_n$与$a_n$（或$S_n$与$n$）的关系，求$a_n$
 
-- ①$n=1$,$a_1=S_1$
-- ②$n\ge2$,$a_n=S_n-S_{n-1}$
-- ③验证$n=1$
-- ④下结论
+    - ①$n=1$,$a_1=S_1$
+    - ②$n\ge2$,$a_n=S_n-S_{n-1}$
+    - ③验证$n=1$
+    - ④下结论
 
-2. 数列：$a_1,a_2,\dots,a_n$与集合$\{a_1,a_2,\dots,a_n\}$区别
-
-数列各项有序，而集合元素无序
+2. 数列：$a_1,a_2,\dots,a_n$与集合$\{a_1,a_2,\dots,a_n\}$区别：数列各项有序，而集合元素无序
 
 3. 下标等差项等差：$a_n$ 等差， $a_k,a_{k+m},a_{k+2m},\dots$ 等差，公差 $d'=md$
 
@@ -141,54 +141,54 @@ $$
 
 5. 片段和等差：等差数列$\{a_n\}$(公差d)中前n项和为$S_n$,则$S_m,S_{2m}-S_m,S_{3m}-S_{2m}$成等差数列,公差为$m^2d$
 
-6. 等差数列前2n-1项和公式：$S_{2n-1}=(2n-1)a_n$, $S_n=na_{\frac{n+1}{2}}$，$S_{2n}=n（a_n+a_{n+1}）$
+6. 等差数列前2n-1项和公式：$S_{2n-1}=(2n-1)a_n$, $S_n=na_{\frac{n+1}{2}}$，$S_{2n}=n(a_n+a_{n+1})$
 
 7. 设等差数列$\{a_n\}$的前n项和为$S_n$，等差数列$\{b_n\}$的前n项和为$T_n$
 
-（1）$\frac{S_n}{T_n}=\frac{a_1+a_n}{b_1+b_n}$；
-（2）$\frac{a_n}{b_n}=\frac{2a_n}{2b_n}=\frac{a_1+a_{2n-1}}{b_1+b_{2n-1}}=\frac{S_{2n-1}}{T_{2n-1}}$
+    （1）$\frac{S_n}{T_n}=\frac{a_1+a_n}{b_1+b_n}$；
+    （2）$\frac{a_n}{b_n}=\frac{2a_n}{2b_n}=\frac{a_1+a_{2n-1}}{b_1+b_{2n-1}}=\frac{S_{2n-1}}{T_{2n-1}}$
 
 8. 已知$\frac{S_n}{T_n}=\frac{an+b}{cn+d}$ 则$\frac{a_m(2m-1)}{b_n(2n-1)}=\frac{S_{2m-1}}{T_{2n-1}}$
 
-证：
-$\frac{a_m}{b_n}=\frac{2a_m}{2b_n}=\frac{a_1+a_{2m-1}}{b_1+b_{2n-1}}=\frac{(\frac{(2m-1)(a_1+a_{2m-1})}{2})(2n-1)}{(\frac{(2n-1)(b_1+b_{2n-1})}{2})(2m-1)}=\frac{(S_{2m-1})(2n-1)}{(T_{2n-1})(2m-1)}$
+    证：
+    $\frac{a_m}{b_n}=\frac{2a_m}{2b_n}=\frac{a_1+a_{2m-1}}{b_1+b_{2n-1}}=\frac{(\frac{(2m-1)(a_1+a_{2m-1})}{2})(2n-1)}{(\frac{(2n-1)(b_1+b_{2n-1})}{2})(2m-1)}=\frac{(S_{2m-1})(2n-1)}{(T_{2n-1})(2m-1)}$
 
 9. 等差数列的奇偶项
 
-（1）若项数为2n，则$S_{偶}-S_{奇}=nd$，$\frac{S_{奇}}{S_{偶}}=\frac{a_n}{a_{n+1}}$
+    （1）若项数为2n，则$S_\text{偶}-S_\text{奇}=nd$，$\frac{S_\text{奇}}{S_\text{偶}}=\frac{a_n}{a_{n+1}}$
 
-$S_{偶}=a_2+a_4+a_6+\dots+a_{2n}$  
-$S_{奇}=a_1+a_3+a_5+\dots+a_{2n-1}$  
-$\Rightarrow S_{偶}-S_{奇}=nd$
+    $S_\text{偶}=a_2+a_4+a_6+\dots+a_{2n}$  
+    $S_\text{奇}=a_1+a_3+a_5+\dots+a_{2n-1}$  
+    $\Rightarrow S_\text{偶}-S_\text{奇}=nd$
 
-$S_{奇}=\frac{n(a_1+a_{2n-1})}{2}=na_n$  
-$S_{偶}=\frac{n(a_2+a_{2n})}{2}=na_{n+1}$  
-$\Rightarrow \frac{S_{奇}}{S_{偶}}=\frac{a_n}{a_{n+1}}$
+    $S_\text{奇}=\frac{n(a_1+a_{2n-1})}{2}=na_n$  
+    $S_\text{偶}=\frac{n(a_2+a_{2n})}{2}=na_{n+1}$  
+    $\Rightarrow \frac{S_\text{奇}}{S_\text{偶}}=\frac{a_n}{a_{n+1}}$
 
-（2）若项数为$2n-1$，则$S_{奇}-S_{偶}=a_n$，$\frac{S_{奇}}{S_{偶}}=\frac{n}{n-1}$
+    （2）若项数为$2n-1$，则$S_\text{奇}-S_\text{偶}=a_n$，$\frac{S_\text{奇}}{S_\text{偶}}=\frac{n}{n-1}$
 
-$S_{奇}=\frac{n(a_1+a_{2n-1})}{2}=na_n$  
-$S_{偶}=\frac{(n-1)(a_2+a_{2n-2})}{2}=(n-1)a_n$  
-$\Rightarrow S_{奇}-S_{偶}=a_n$  
-$\frac{S_{奇}}{S_{偶}}=\frac{n}{n-1}$
+    $S_\text{奇}=\frac{n(a_1+a_{2n-1})}{2}=na_n$  
+    $S_\text{偶}=\frac{(n-1)(a_2+a_{2n-2})}{2}=(n-1)a_n$  
+    $\Rightarrow S_\text{奇}-S_\text{偶}=a_n$  
+    $\frac{S_\text{奇}}{S_\text{偶}}=\frac{n}{n-1}$
 
 10. 等差数列$\{a_n\}$与$\{b_n\}$中，$a_n=a_1+(n-1)d_1$与$b_n=b_1+(n-1)d_2,\{a_n\}$与$\{b_n\}$的共同项构成一个新的等差数列，其公差为$d_1$与$d_2$最小公倍数
 
-11.  等差数列$\{a_n\}$前$n$项和为$S_n$，若 $a_1>0,\;d<0,\;a_m=0$，记
+11. 等差数列$\{a_n\}$前$n$项和为$S_n$，若 $a_1>0,\;d<0,\;a_m=0$，记
 
-$$
-T_n=|a_1|+|a_2|+\dots+|a_n|
-$$
+    $$
+    T_n=|a_1|+|a_2|+\dots+|a_n|
+    $$
 
-则
+    则
 
-$$
-T_n=
-\begin{cases}
-S_n & (1 \le n \le m) \\
--S_n+2S_m & (n \ge m+1)
-\end{cases}
-$$
+    $$
+    T_n=
+    \begin{cases}
+    S_n & (1 \le n \le m) \\
+    -S_n+2S_m & (n \ge m+1)
+    \end{cases}
+    $$
 
 12. 等差数列$\{a_n\}$公差$d$，$S_{m+n}=S_m+S_n+mnd=\frac{(m+n)(S_m-S_n)}{m-n}$
 
@@ -282,23 +282,23 @@ $q,\;q^2,\;\frac{1}{q},\;q^r,\;pq$
 
 4. 等比数列奇偶项
 
-- 等比数列$\{a_n\}$项数为偶数，则$\frac{S_{偶}}{S_{奇}}=q$
-- 等比数列$\{a_n\}$项数为奇数，则$\frac{S_{奇}-a_1}{S_{偶}}=q$
+   - 等比数列$\{a_n\}$项数为偶数，则$\frac{S_\text{偶}}{S_\text{奇}}=q$
+   - 等比数列$\{a_n\}$项数为奇数，则$\frac{S_\text{奇}-a_1}{S_\text{偶}}=q$
 
 5. 若等比数列$\{a_n\}$的前$n$项和为$S_n$，则$S_{m+n}=S_m+q^m S_n=S_n+q^n S_m$（$q=1$时也成立）
 
-**证明**：
-$$
-\begin{align*}
-S_{m+n}&=a_1+a_2+\dots+a_m+a_{m+1}+a_{m+2}+\dots+a_{m+n}\\
-&=S_m+a_{m+1}+a_{m+2}+\dots+a_{m+n}\\
-&=S_m+a_1 q^m+a_2 q^m+\dots+a_n q^m\\
-&=S_m+q^m(a_1+a_2+\dots+a_n)\\
-&=S_m+q^m S_n
-\end{align*}
-$$
+    **证明**：
+    $$
+    \begin{align*}
+    S_{m+n}&=a_1+a_2+\dots+a_m+a_{m+1}+a_{m+2}+\dots+a_{m+n}\\
+    &=S_m+a_{m+1}+a_{m+2}+\dots+a_{m+n}\\
+    &=S_m+a_1 q^m+a_2 q^m+\dots+a_n q^m\\
+    &=S_m+q^m(a_1+a_2+\dots+a_n)\\
+    &=S_m+q^m S_n
+    \end{align*}
+    $$
 
-当$S_n = A - Aq^n$时，$S_n - S_m = A(q^m - q^n)$，其中$A=\frac{a_1}{1-q}$
+    当$S_n = A - Aq^n$时，$S_n - S_m = A(q^m - q^n)$，其中$A=\frac{a_1}{1-q}$
 
 6. 既是等差数列又是等比数列的数列是**非零**常数列
 
@@ -382,7 +382,7 @@ $$
 
 #### 一、求通项的方法
 
-1.  **观察法（适应选填）**
+1. **观察法（适应选填）**
 
     例子：
     - $1,3,5,7,9,\dots \implies a_n=2n-1$
@@ -395,7 +395,7 @@ $$
     - $0.9,0.99,0.999,\dots \implies a_n=1-\left(\frac{1}{10}\right)^n$
     数列通项公式不一定存在，存在不一定唯一
 
-2.  **累加法（$a_{n+1}-a_n=f(n)$）**
+2. **累加法（$a_{n+1}-a_n=f(n)$）**
 
     ① 当 $n\ge2$ 时：
 
@@ -418,11 +418,11 @@ $$
 
     ③ 下结论
 
-3.  **累乘法（$\frac{a_{n+1}}{a_n}=f(n)$）**
+3. **累乘法（$\frac{a_{n+1}}{a_n}=f(n)$）**
 
-4.  **$S_n$与$a_n$转化**
+4. **$S_n$与$a_n$转化**
 
-5.  **作商法**
+5. **作商法**
 
     已知 $a_1a_2\cdots a_n=f(n)$ 求 $a_n$
 
@@ -433,19 +433,19 @@ $$
     \end{cases}
     $$
 
-6.  **倒数法（$a_{n+1}=\frac{pa_n}{ka_n+p}$）**
+6. **倒数法（$a_{n+1}=\frac{pa_n}{ka_n+p}$）**
 
     $$
     \frac{1}{a_{n+1}}=\frac{ka_n+p}{pa_n}=\frac{k}{p}+\frac{1}{a_n} \implies \frac{1}{a_{n+1}}-\frac{1}{a_n}=\frac{k}{p}
     $$
 
-7.  **构造等比数列法（$a_{n+1}=pa_n+q$）**
+7. **构造等比数列法（$a_{n+1}=pa_n+q$）**
 
     设 $a_{n+1}+\lambda=p(a_n+\lambda)$，则 $p\lambda-\lambda=q \implies \lambda=\frac{q}{p-1}$
 
 #### 二、其他构造方法
 
-1.  **含幂的构造等差数列**
+1. **含幂的构造等差数列**
 
     ① $a_{n+1}=pa_n+p^n$ 求 $a_n$
 
@@ -461,7 +461,7 @@ $$
 
     （同方法7）
 
-2.  **换元法构造新数列**
+2. **换元法构造新数列**
 
     已知 $a_{n+1}=pa_n+qa_{n-1}\ (n\ge2)$
 
@@ -477,7 +477,7 @@ $$
     \begin{cases}x+y=p \\ -xy=q\end{cases}
     $$
 
-3.  **取对数**
+3. **取对数**
 
     已知 $a_{n+1}=pa_n^k\ (a_n>0,p>0,k\neq1)$
 
@@ -489,15 +489,15 @@ $$
 
 #### 三、数列求和（按求项先研究通项）
 
-1.  **公式法**
+1. **公式法**
 
-2.  **分组求和**
+2. **分组求和**
 
-3.  **倒序相加**（倒序后对应项的和为定值）
+3. **倒序相加**（倒序后对应项的和为定值）
 
-4.  **错位相减**（仅适用于等比数列求和公式 $S_n=\frac{a_1-a_n q}{1-q}$ 相关形式）
+4. **错位相减**（仅适用于等比数列求和公式 $S_n=\frac{a_1-a_n q}{1-q}$ 相关形式）
 
-5.  **裂项相消**
+5. **裂项相消**
 
     常用裂项公式：
 

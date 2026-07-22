@@ -107,13 +107,13 @@ draft: false
 6. 增函数（减函数）必须是在定义域上单调增（减），如$y=tanx$不是增函数，$y=\frac{1}{x}$不是减函数。
 7. 
    $$
-   \begin{align*}
+   \begin{gather*}
    \frac{f(x_1)-f(x_2)}{x_1-x_2}>0 \Rightarrow f(x) \text{增} \\
    [f(x_1)-f(x_2)](x_1-x_2)>0 \Rightarrow f(x) \text{增} \\
    \frac{f(x_1)-f(x_2)}{x_1-x_2}<0 \Rightarrow f(x) \text{减} \\
    [f(x_1)-f(x_2)](x_1-x_2)<0 \Rightarrow f(x) \text{减} \\
    \frac{f(x_1)-f(x_2)}{x_1-x_2}>k \Rightarrow y=f(x)-kx \text{增}
-   \end{align*}
+   \end{gather*}
    $$
 
 :::
@@ -135,7 +135,7 @@ draft: false
 3. 图象法；
 4. 常用结论：
    $$
-   \begin{align*}
+   \begin{gather*}
    ↑+↑ \Rightarrow ↑ \\
    ↓+↓ \Rightarrow ↓ \\
    ↑-↓ \Rightarrow ↑ \\
@@ -144,7 +144,7 @@ draft: false
    f(x)↑ \Rightarrow \sqrt{f(x)}↓ (f(x)\geq0) \\
    f(x)↑ \Rightarrow \begin{cases} a>0,af(x)↑ \\ a<0,af(x)↓ \end{cases} \\
    f(x)↑,g(x)↑,f(x)>0,g(x)>0 \Rightarrow f(x) \cdot g(x)
-   \end{align*}
+   \end{gather*}
    $$
 5. **复合函数法**：设复合函数$y=f(g(x))$，内函数$u=g(x)$，外函数$y=f(u)$，注意定义域。  
     步骤：求定义域→分解为2个函数→分别判断内外函数的单调性→根据“同增异减”下结论。  

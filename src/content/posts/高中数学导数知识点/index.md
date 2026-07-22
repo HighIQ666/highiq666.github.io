@@ -45,14 +45,20 @@ $$
 (c)'={0}\quad
 (x^\alpha)'={\alpha x^{\alpha-1}}\quad
 (\sin x)'={\cos x}\quad
-(\cos x)'={-\sin x} \\
+(\cos x)'={-\sin x}
+$$
+$$
 (a^x)'={a^x \ln a}\quad
 (e^x)'={e^x}\quad
 (\log_a x)'={\frac{1}{x \ln a}}\quad
-(\ln x)'={\frac{1}{x}} \\
+(\ln x)'={\frac{1}{x}}
+$$
+$$
 (x \ln x)'={\ln x + 1}\quad
 (\frac{1}{x})'={-\frac{1}{x^2}}\quad
-(\sqrt{x})'={\frac{1}{2\sqrt{x}}} \\
+(\sqrt{x})'={\frac{1}{2\sqrt{x}}}
+$$
+$$
 (e^x f(x))'={e^x(f(x)+f'(x))} \quad
 \left[\frac{f(x)}{e^x}\right]'={\frac{f'(x)-f(x)}{e^x}}
 $$
@@ -61,8 +67,12 @@ $$
 
 $$
 (f \pm g)' = {f' \pm g'}\quad
-(f \cdot g)' = {f'g + fg'} \\
-\left(\frac{f}{g}\right)' = {\frac{f'g - fg'}{g^2}} \\
+(f \cdot g)' = {f'g + fg'}
+$$
+$$
+\left(\frac{f}{g}\right)' = {\frac{f'g - fg'}{g^2}}
+$$
+$$
 [f(g(x))]' = {f'(g(x)) \cdot g'(x)}\quad
 (f \cdot g \cdot h)' = {f'gh + fg'h + fgh'}
 $$
@@ -128,26 +138,26 @@ $$
 1. $f(x)>a$ 恒成立 $\iff {a < f(x)_{\min}}$
 2. $a < f(x)$ 能成立 $\iff {a < f(x)_{\max}}$
 
-:::note
-从参数开始读  
-恒成立：大大小小  
-能成立：大小小大
-:::
+    :::note
+    从参数开始读  
+    恒成立：大大小小  
+    能成立：大小小大
+    :::
 
 3. $f(x)>g(x)$ 恒成立 $\iff {[f(x)-g(x)]_{\min} > 0}$
 4. $\forall x_1,x_2$，有 $f(x_1)>g(x_2) \iff {f(x)_{\min} > g(x)_{\max}}$
 5. $\exists x_1,x_2$，有 $f(x_1)>g(x_2) \iff {f(x)_{\max} > g(x)_{\min}}$
 6. $\forall x_1, \exists x_2$，有 $f(x_1)>g(x_2) \iff {f(x)_{\min} > g(x)_{\min}}$
 
-:::note
-双变量不等式  
-一动一静  
-各个击破  
-找最值关系
-:::
+    :::note
+    双变量不等式  
+    一动一静  
+    各个击破  
+    找最值关系
+    :::
 
-7. $a=f(x)$ 成立 $\iff {a \in f(x) 的值域}$
-8. $\forall x_1, \exists x_2$，有 $f(x_1)=g(x_2) \iff {f(x) 值域 \subseteq g(x) 值域}$
+7. $a=f(x)$ 成立 $\iff {a \in f(x) \text{的值域}}$
+8. $\forall x_1, \exists x_2$，有 $f(x_1)=g(x_2) \iff {f(x) \text{值域} \subseteq g(x) \text{值域}}$
 9. $\forall x_1,x_2$，有 $|f(x_1)-f(x_2)|<C$ 成立 $\iff {f(x)_{\max}-f(x)_{\min} < C}$
 
 #### 2. 对称性与恒成立
@@ -207,20 +217,21 @@ $$
     - 当 $P$ 在曲线或 $l$ 上（不含 $N$）时，切线有 $\boldsymbol{2}$ 条
 
 ![三次函数切线](cubic_function_tangent.png)
+
 ---
 
 ### 七、构造函数常用技巧
 
 $$
 \begin{align*}
-&①\ f'(x)g(x)+f(x)g'(x) \quad \Leftrightarrow \quad [f(x)g(x)]' \\
-&②\ f'(x)g(x)-f(x)g'(x) \quad \Leftrightarrow \quad \left[\frac{f(x)}{g(x)}\right]' \\
-&③\ nf(x)+xf'(x) \quad \Leftrightarrow \quad [x^n f(x)]' \\
-&④\ xf'(x)-nf(x) \quad \Leftrightarrow \quad \left[\frac{f(x)}{x^n}\right]' \\
-&⑤\ \tan x \cdot f'(x)+f(x) = \frac{[\sin x \cdot f(x)]'}{\cos x} \\
-&⑥\ \tan x \cdot f'(x)-f(x) = \frac{[\sin x \cdot f'(x)-\cos x \cdot f(x)]}{\cos x} = \left[\frac{f(x)}{\sin x}\right]' \frac{1}{\cos x} \\
-&⑦\ f'(x)-\tan x \cdot f(x) = \left[\frac{f(x)}{\sin x}\right]' \sin x = \frac{[\cos x \cdot f'(x)-\sin x \cdot f(x)]}{\cos x} = \left[f(x)\cos x\right]' \frac{1}{\cos x} \\
-&⑧\ f'(x)+\tan x \cdot f(x) = \frac{[\cos x \cdot f'(x)+\sin x \cdot f(x)]}{\cos x} = \left[\frac{f(x)}{\cos x}\right]' \frac{1}{\cos x}
+&\text{\textcircled{1}} \ f'(x)g(x)+f(x)g'(x) \quad \Leftrightarrow \quad [f(x)g(x)]' \\
+&\text{\textcircled{2}} \ f'(x)g(x)-f(x)g'(x) \quad \Leftrightarrow \quad \left[\frac{f(x)}{g(x)}\right]' \\
+&\text{\textcircled{3}} \ nf(x)+xf'(x) \quad \Leftrightarrow \quad [x^n f(x)]' \\
+&\text{\textcircled{4}} \ xf'(x)-nf(x) \quad \Leftrightarrow \quad \left[\frac{f(x)}{x^n}\right]' \\
+&\text{\textcircled{5}} \ \tan x \cdot f'(x)+f(x) = \frac{[\sin x \cdot f(x)]'}{\cos x} \\
+&\text{\textcircled{6}} \ \tan x \cdot f'(x)-f(x) = \frac{[\sin x \cdot f'(x)-\cos x \cdot f(x)]}{\cos x} = \left[\frac{f(x)}{\sin x}\right]' \frac{1}{\cos x} \\
+&\text{\textcircled{7}} \ f'(x)-\tan x \cdot f(x) = \left[\frac{f(x)}{\sin x}\right]' \sin x = \frac{[\cos x \cdot f'(x)-\sin x \cdot f(x)]}{\cos x} = \left[f(x)\cos x\right]' \frac{1}{\cos x} \\
+&\text{\textcircled{8}} \ f'(x)+\tan x \cdot f(x) = \frac{[\cos x \cdot f'(x)+\sin x \cdot f(x)]}{\cos x} = \left[\frac{f(x)}{\cos x}\right]' \frac{1}{\cos x}
 \end{align*}
 $$
 
@@ -232,10 +243,10 @@ $$
 
 $$
 \begin{align*}
-&①\ x e^x = e^{x+\ln x} \\
-&②\ \frac{e^x}{x} = e^{x-\ln x} \\
-&③\ x+\ln x = \ln(x e^x) \\
-&④\ x-\ln x = \ln\frac{e^x}{x}
+&\text{\textcircled{1}} \ x e^x = e^{x+\ln x} \\
+&\text{\textcircled{2}} \ \frac{e^x}{x} = e^{x-\ln x} \\
+&\text{\textcircled{3}} \ x+\ln x = \ln(x e^x) \\
+&\text{\textcircled{4}} \ x-\ln x = \ln\frac{e^x}{x}
 \end{align*}
 $$
 
@@ -293,19 +304,19 @@ $$
 
 ##### 二、第一分支：$e^x$ 衍生不等式
 
-1.  对母式做**变量替换 $x \to x-1$**：
+1. 对母式做**变量替换 $x \to x-1$**：
     $$
     e^{x-1} \geq x \implies \boldsymbol{e^x \geq ex} \quad (\text{等号当且仅当 } x=1 \text{ 时成立})
     $$
-2.  对 $e^x \geq ex$ 做**变量替换 $x \to \ln x$**（$x>0$）：
+2. 对 $e^x \geq ex$ 做**变量替换 $x \to \ln x$**（$x>0$）：
     $$
     x \geq e\ln x \implies \boldsymbol{\ln x \leq \frac{1}{e}x} \quad (\text{等号当且仅当 } x=e \text{ 时成立})
     $$
-3.  对 $\ln x \leq \frac{1}{e}x$ 做**变量替换 $x \to \frac{1}{x}$**（$x>0$）：
+3. 对 $\ln x \leq \frac{1}{e}x$ 做**变量替换 $x \to \frac{1}{x}$**（$x>0$）：
     $$
     -\ln x \leq \frac{1}{ex} \implies \boldsymbol{-\frac{1}{e}x \leq \ln x} \quad (\text{等号当且仅当 } x=\frac{1}{e} \text{ 时成立})
     $$
-4.  对母式做**变量替换 $x \to -x$**（$x>1$）：
+4. 对母式做**变量替换 $x \to -x$**（$x>1$）：
     $$
     e^{-x} \geq 1-x \implies \boldsymbol{e^x \geq \frac{1}{1-x} \ (x>1)}
     $$
@@ -314,30 +325,30 @@ $$
 
 ##### 三、第二分支：$\ln x$ 衍生不等式
 
-1.  对母式做**变量替换 $x \to \ln x$**（$x>0$）：
+1. 对母式做**变量替换 $x \to \ln x$**（$x>0$）：
     $$
     x \geq 1+\ln x \implies \boldsymbol{\ln x \leq x-1} \quad (\text{等号当且仅当 } x=1 \text{ 时成立})
     $$
-2.  对母式做**变量替换 $x \to \ln(1+x)$**（$x>-1$）：
+2. 对母式做**变量替换 $x \to \ln(1+x)$**（$x>-1$）：
     $$
     1+x \geq 1+\ln(1+x) \implies \boldsymbol{\ln(1+x) \leq x} \quad (\text{等号当且仅当 } x=0 \text{ 时成立})
     $$
-3.  对 $\ln x \leq x-1$ 做**变量替换 $x \to \frac{1}{x}$**（$x>0$）：
+3. 对 $\ln x \leq x-1$ 做**变量替换 $x \to \frac{1}{x}$**（$x>0$）：
     $$
     -\ln x \leq \frac{1}{x}-1 \implies \boldsymbol{\ln x \geq 1-\frac{1}{x}} \quad (\text{等号当且仅当 } x=1 \text{ 时成立})
     $$
-4.  联立 $\ln x \leq x-1$ 与 $\ln x \geq 1-\frac{1}{x}$，得到核心双向不等式：
+4. 联立 $\ln x \leq x-1$ 与 $\ln x \geq 1-\frac{1}{x}$，得到核心双向不等式：
     $$
     \boldsymbol{1-\frac{1}{x} \leq \ln x \leq x-1} \quad (x>0, \text{等号当且仅当 } x=1 \text{ 时成立})
     $$
-5.  对 $1-\frac{1}{x} \leq \ln x \leq x-1$ 做**变量替换 $x \to x+1$**（$x>-1$）：
+5. 对 $1-\frac{1}{x} \leq \ln x \leq x-1$ 做**变量替换 $x \to x+1$**（$x>-1$）：
     $$
     \boldsymbol{\frac{x}{x+1} \leq \ln(1+x) \leq x} \quad (\text{等号当且仅当 } x=0 \text{ 时成立})
     $$
 
 ---
 
-```
+```text
                 e^x ≥ 1+x (核心)
                 /       |       \
                /        |        \
@@ -387,8 +398,8 @@ e^x ≥ 1/(1-x)(x>1)  ln(1+x)≤x  ln x ≤ x-1
 
 1. 结论
 
-① 二次函数 $f(x)=ax^2+bx+c<0\ (a>0)$ 在 $[m,n]$ 上恒成立，则 $\begin{cases} f(m)<0 \\ f(n)<0 \end{cases}$  
-② 一次函数 $f(x)=kx+b>0$ 在 $[m,n]$ 上恒成立，则 $\begin{cases} f(m)>0 \\ f(n)>0 \end{cases}$；  
+    ① 二次函数 $f(x)=ax^2+bx+c<0\ (a>0)$ 在 $[m,n]$ 上恒成立，则 $\begin{cases} f(m)<0 \\ f(n)<0 \end{cases}$  
+    ② 一次函数 $f(x)=kx+b>0$ 在 $[m,n]$ 上恒成立，则 $\begin{cases} f(m)>0 \\ f(n)>0 \end{cases}$；  
 在 $[m,+\infty)$ 上恒成立，则 $\begin{cases} k>0 \\ f(m)>0 \end{cases}$
 
 2. 优先考虑**参变分离**
