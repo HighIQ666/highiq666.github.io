@@ -115,29 +115,57 @@ yuu hi mi tai ni moe tei ru
 
 ---
 
-凪(な)ぐ    噪(さわ)ぐ    干上(ひあ)がる
+凪(な)ぐ 噪(さわ)
 
-na gu sa wa gu hia ga ru
+na gu sa wa
 
-戸惑(とまど)う    茹(ゆ)っていく
+ぐ干上(ひあ)がる
 
-to ma dou yu da ttei ku
+gu hia ga ru
 
-知れ無(しれな)い    歪(ひず)な頭(あたま)の中(なか)
+戸惑(とまど)う
 
-shi re naii bi tsu naa ta ma no na ka
+to ma dou
 
-躊躇(ためら)う    言葉(ことば)
+茹(ゆ)っていく
 
-ta me rau ko to ba
+yu da ttei ku
+
+知れ無(しれな)い
+
+shi re naii
+
+歪(ひず)な
+
+bi tsu na
+
+頭(あたま)の中(なか)
+
+a ta ma no na ka
+
+躊躇(ためら)う
+
+ta me rau
+
+言葉(ことば)
+
+ko to ba
 
 吹(ふ)き曝(さら)して
 
 fu ki sa ra shi te
 
-野暮天(やぼてん)な風(かぜ)が    髪(かみ)を撫(な)でる
+野暮天(やぼてん)
 
-ya bo ten na ka ze ga ka mi wo na de ru
+ya bo ten
+
+な風(かぜ)が
+
+na ka ze ga
+
+髪(かみ)を撫(な)でる
+
+ka mi wo na de ru
 
 気(き)がつけば    情景(じょうけい)も
 
