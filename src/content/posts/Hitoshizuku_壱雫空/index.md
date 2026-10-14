@@ -21,9 +21,13 @@ mo shi ko no a me ga a ga tte mo
 
 wa su re zu ni a rui te ku yo
 
-最初(さいしょ)のひとしずくに 顔(かお)上(あ)げた今日(きょう)の僕(ぼく)を
+最初(さいしょ)のひとしずくに
 
-sa i syo no hi to shi zu ku ni kao a ge ta kyou no bo ku wo
+sa i syo no hi to shi zu ku ni
+
+顔(かお)上(あ)げた今日(きょう)の僕(ぼく)を
+
+kao a ge ta kyou no bo ku wo
 
 ---
 
@@ -47,9 +51,13 @@ so tto ni ge kon de i ta
 
 bi nii ru ko shi no so ra ka ra
 
-こぼれ落(お)ちる音(おと)響(ひび)いて
+こぼれ落(お)ちる
 
-ko bo re o chi ru `|` o to hi bi i te
+ko bo re o chi ru
+
+音(おと)響(ひび)いて
+
+o to hi bi i te
 
 (弾(はじ)けた合図(あいず))
 
@@ -59,9 +67,13 @@ ha ji ke ta a i zu
 
 ni ji mu ko ko ro he to to ke ta
 
-泣(な)きじゃくっている この空(そら)といこう
+泣(な)きじゃくっている
 
-na ki jya ku tte i ru ko no so ra to i ko u
+na ki jya ku tte i ru
+
+この空(そら)といこう
+
+ko no so ra to i ko u
 
 (アスファルト染(そ)めていく 溢(あふ)れ出(だ)したスコール)
 
