@@ -75,7 +75,7 @@ ko ga re a ko ga re
 
 u ta u no
 
-Re:Dreaming Angel
+ReDreaming Angel
 
 痺(しび)れる偶像(ぐうぞう)に恋(こい)してる
 
@@ -157,7 +157,7 @@ ko ga re a ko ga re
 
 u ta u no
 
-Re:Dreaming Angel
+ReDreaming Angel
 
 痺(しび)れる偶像(ぐうぞう)に恋(こい)してる
 
